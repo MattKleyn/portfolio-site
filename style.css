@@ -1,0 +1,123 @@
+@layer reset, base, navigation, components;
+
+/*reset*/
+@layer reset {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        font-size: 16px;
+    }
+
+    p {
+        font-family: "Roboto Flex", sans-serif;
+        font: 1rem;
+        font-weight: 300;
+    }
+}
+
+/*colour variables*/
+@layer base {
+    :root {
+        --background-color: FFFFFFF;
+        --background-dark: #00171F;
+        --background-light: #F6F7EB;
+        --text-dark: #00171F; 
+        --text-light: #F6F7EB;
+        --accent-color: #007EA7;
+        --accent-dark: #003459;
+        --text-LG: 2.5rem;
+        --text-M: 2rem;
+        --text-S: 1.5rem;
+        --text-caption: 1rem;
+    }
+
+    body {
+        color: var(--text-dark);
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+}
+
+@layer navigation {
+    header {
+        background-color: var(--background-dark);
+        color: var(--text-light);        
+
+       nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 160px;
+
+            ul {
+                list-style: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 1.5rem;
+                font-size: var(--text-S);
+                font-family: "Red Rose", sans-serif;
+                font-weight: 300;
+            }
+        } 
+    }
+}
+
+@layer components {
+
+    main {
+        /*margin: 0 160px;*/
+    
+        h1 {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 6rem;
+            letter-spacing: 2rem; /*calcs to 3rem, to test*/
+        }
+
+        #title-description {
+                font-family: "Ibarra Real Nova", serif;
+        } /*main h2*/
+
+        h2 {
+            font-family: "Red Rose", serif;
+            font-size: 3rem;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-family: "Red Rose", serif;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--background-light);
+            padding: 6rem 160px; 
+            gap: 4rem;
+            align-items: center;
+
+            ul {
+                margin-top: 1rem;
+
+                li {
+                    display: inline;
+                }
+            }
+
+            & > img {
+                height: 470px;
+            }
+        }
+
+    /*skills section*/
+
+    }
+}
+
