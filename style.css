@@ -71,28 +71,30 @@
 @layer components {
 
     main {
-        /*margin: 0 160px;*/
-    
+            
         h1 {
             font-family: "Bebas Neue", sans-serif;
             font-size: 6rem;
             letter-spacing: 2rem; /*calcs to 3rem, to test*/
         }
-
+        
+        /*hero h2*/
         #title-description {
                 font-family: "Ibarra Real Nova", serif;
-        } /*main h2*/
+        } 
 
         h2 {
             font-family: "Red Rose", serif;
             font-size: 3rem;
             font-weight: 300;
+            margin-bottom: 6rem;
         }
 
         h3 {
             font-family: "Red Rose", serif;
             font-size: 2rem;
             font-weight: 300;
+            margin-bottom: 1.5rem;
         }
 
         .hero {
@@ -116,7 +118,46 @@
             }
         }
 
-    /*skills section*/
+        /*skills section*/
+        .skills {
+            padding: 6rem 160px;
+            background-color: var(--background-light);
+            
+
+            h2 {
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            .skill-container {
+                display: flex;
+                gap: 4rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                font-family: "Roboto Flex", sans-serif;
+                font: 1.5rem; /*As per design but seems small*/
+                font-weight: 300;
+                
+                li {
+                    list-style: none;
+                    line-height: 2rem; /*Design is gap 12px, but seems congested*/
+                }
+
+                #future-skills {
+                    display: none;
+                }
+            }
+
+        }
+
+        
+
+
+
+
+
+
 
     }
 }
