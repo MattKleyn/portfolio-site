@@ -13,8 +13,10 @@
 
     p {
         font-family: "Roboto Flex", sans-serif;
-        font: 1rem;
+        font-size: 1.5rem;
         font-weight: 300;
+        line-height: 2rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -41,6 +43,9 @@
     a {
         text-decoration: none;
         color: inherit;
+        font-family: "Red Rose", serif;
+        font-size: 1.5rem;
+        font-weight: 300;
     }
 
 }
@@ -49,12 +54,14 @@
     header {
         background-color: var(--background-dark);
         color: var(--text-light);        
+        position: sticky;
+        top: 0;
 
        nav {
             display: flex;
             justify-content: space-between;
             padding: 1rem 160px;
-
+            
             ul {
                 list-style: none;
                 display: inline-flex;
@@ -63,6 +70,11 @@
                 font-size: var(--text-S);
                 font-family: "Red Rose", sans-serif;
                 font-weight: 300;
+
+                li:hover {
+                    opacity: 80%;
+                    border-bottom: 1px solid var(--accent-color);
+                }
             }
         } 
     }
@@ -71,23 +83,19 @@
 @layer components {
 
     main {
-            
+        /*heading globals*/            
         h1 {
             font-family: "Bebas Neue", sans-serif;
             font-size: 6rem;
+            font-weight: 500;
             letter-spacing: 2rem; /*calcs to 3rem, to test*/
         }
         
-        /*hero h2*/
-        #title-description {
-                font-family: "Ibarra Real Nova", serif;
-        } 
-
         h2 {
             font-family: "Red Rose", serif;
             font-size: 3rem;
             font-weight: 300;
-            margin-bottom: 6rem;
+            /*margin-bottom: 6rem;*/
         }
 
         h3 {
@@ -97,13 +105,26 @@
             margin-bottom: 1.5rem;
         }
 
+        /*hero h2*/
+        #title-description {
+                font-family: "Ibarra Real Nova", serif;
+        }
+
+        /*hero section*/
         .hero {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             background-color: var(--background-light);
             padding: 6rem 160px; 
             gap: 4rem;
             align-items: center;
+            
+
+            & > img, div {
+                width: 100vw;
+                max-width: 700px;
+            }      
 
             ul {
                 margin-top: 1rem;
@@ -111,10 +132,6 @@
                 li {
                     display: inline;
                 }
-            }
-
-            & > img {
-                height: 470px;
             }
         }
 
@@ -127,7 +144,7 @@
             h2 {
                 display: flex;
                 justify-content: center;
-                
+                margin-bottom: 6rem;
             }
 
             .skill-container {
@@ -135,11 +152,11 @@
                 gap: 4rem;
                 flex-wrap: wrap;
                 justify-content: center;
-                font-family: "Roboto Flex", sans-serif;
-                font: 1.5rem; /*As per design but seems small*/
-                font-weight: 300;
                 
                 li {
+                    font-family: "Roboto Flex", sans-serif;
+                    font-size: 1.5rem; 
+                    font-weight: 300;
                     list-style: none;
                     line-height: 2rem; /*Design is gap 12px, but seems congested*/
                 }
@@ -148,16 +165,83 @@
                     display: none;
                 }
             }
-
         }
 
-        
+        /*featured work section & porfolio.html*/
+        .portfolio {
+            display: flex;
+            flex-direction: column;
+            padding: 6rem 160px;
+            background-color: var(--background-light);
+            gap: 4rem;
+            
+            h2 {
+               text-align: center; 
+            }
+
+            .alternate {
+                flex-direction: row-reverse;
+            }  
+
+            & > a {
+                text-align: end;
+                background-color: #007EA7;
+                border-radius: 100px;
+                padding: 0.5rem 3rem;
+                /*max-width: fit-content;*//*resets alignment for some reason*/
+                color: var(--text-light);
+                
+                &:hover {
+                    background-color: #003459;
+                }                
+            }
+
+            .portfolio-card {
+                display: flex;
+                justify-content: space-between;
+
+                & > img {
+                    width: 45%;
+                    object-fit: cover;
+                }
+                
+                & > div {
+                    width: 45%;
+                    align-content: center;
+                
+                    a {
+                        background-color: #007EA7;
+                        border-radius: 100px;
+                        padding: 0.5rem 3rem;
+                        color: var(--text-light);
+
+                        &:hover {
+                            background-color: #003459;
+                        }
+                    }
+
+                    /*portfolio.html card tech stack*/
+                    .project-stack {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        list-style: none;
+                        margin-bottom: 1.5rem;
+                        gap: 1rem;
+                        font-family: "Roboto Flex", sans-serif;
+                        font-size: 1rem; 
+                        font-weight: 200;
+                        line-height: 2rem; /*Design is gap 12px, but seems congested*/                        
+                    }
+                }
+            }
+        }
+
+        /*about me section*/
 
 
 
-
-
-
+        /*footer*/
 
     }
 }
