@@ -13,7 +13,7 @@
     <body>
         <header>
             <nav id="nav-bar">
-                <img src="./logo.svg" height="50" alt="My personal brand logo">
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
                 <ul id="nav-list" class="nav-list">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./portfolio.html">Portfolio</a></li>
@@ -22,12 +22,10 @@
                 </ul>
             </nav>     
         </header>
-       
 
-        <main>
-            <h1>Resume</h1>
-           
-            <section>
+        <main class="resume-main">
+            <section class="banner">
+                <h1>Resume</h1>
                 <h2>Matthew Kleynhans</h2>
                 <h3>Fullstack web designer and developer</h3>
                 <h4>Based in Johannesburg</h4>
@@ -38,30 +36,32 @@
                     <dd>numbah</dd>
                     <dt><img src="file path">Website</dt>
                     <dd><a href="https://www.google.com" alt="web logo">google.com</a></dd>
-                    <dt><img src="file path">LinkedIn</dt>
+                    <dt><img src="./assets/Linkedin Icon Streamline SVG Logos.svg">LinkedIn</dt>
                     <dd><a href="https://www.google.com" alt="linked-in logo">profile name</a></dd>
-                    <dt><img src="file path">Github</dt>
+                    <dt><img src="./assets/Github Streamline Unicons Line.svg">Github</dt>
                     <dd><a href="https://www.google.com" alt="github logo">profile name</a></dd>
                 </dl>
             </section>
 
-            <section id="aboutme">
+            <section id="resume-aboutme" class="resume-aboutme">
                 <h2>About Me</h2> <!--Do I even need this?-->  
                 <p>
                     Junior Fullstack Website Designer and Developer, with adjacent interests in mobile application developement, and machine learning.
                 </p>
             </section>
             
-            <section id="skills">
+            <section id="skills" class="resume-skills">
                 <h2>Skills</h2>
-                <h3>Frontend</h3>
-                <p>HTML, CSS, Bootstrap, Javascript, EJS, JQuery</p>
-                <h3>Backend</h3>
-                <p>Python, Javascript, Node.Js, Express.Js </p>
-                <h3>Tools</h3>
-                <p>Git, Figma, Webflow</p>
-                <h3>Concepts</h3>
-                <p>Design principles, UX/UI design</p>
+                <div>
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, Bootstrap, Javascript, EJS, JQuery</p>
+                    <h3>Backend</h3>
+                    <p>Python, Javascript, Node.Js, Express.Js </p>
+                    <h3>Tools</h3>
+                    <p>Git, Figma, Webflow</p>
+                    <h3>Concepts</h3>
+                    <p>Design principles, UX/UI design</p>
+                </div>    
             </section>
 
             <section id="portfolio">
@@ -118,24 +118,27 @@
             </section>
         </main>
 
-        <footer id="contactme">
-            <img src="./logo.svg" height="50" alt="My personal brand logo">
-            <dl>
-                <dt>Email</dt>
-                <dd>mail@gmail.com</dd> <!--maybe do as qr code for safety?-->
-                <dt>Cell No</dt>
-                <dd>numbah</dd>
-                <dt><img src="file path">LinkedIn</dt>
-                <dd><a href="https://www.google.com" alt="linked-in logo">profile name</a></dd>
-                <dt><img src="file path">Github</dt>
-                <dd><a href="https://www.google.com" alt="github logo">profile name</a></dd>
-                <dt><img src="file path">Leetcode</dt>
-                <dd><a href="https://www.google.com" alt="leetcode logo">profile name</a></dd>
-                <dt><img src="file path">Codewars</dt>
-                <dd><a href="https://www.google.com" alt="codewars logo">profile name</a></dd>
-            </dl>
-            <p>copyright @2025</p>                
+        <footer id="contactme" class="contactme">
+            <div>
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
+                <dl>
+                    <dt>Email</dt><!--should be address tag?-->
+                    <dd>mail@gmail.com</dd> <!--maybe do as qr code for safety?-->
+                    <dt>Cell No</dt>
+                    <dd>numbah</dd>
+                    <dt><img src="./assets/Linkedin Icon Streamline SVG Logos.svg">LinkedIn</dt>
+                    <dd><a href="https://www.google.com" alt="linked-in logo">profile name</a></dd>
+                    <dt><img src="./assets/Github Streamline Unicons Line.svg">Github</dt>
+                    <dd><a href="https://www.google.com" alt="github logo">profile name</a></dd>
+                    <dt><img src="file path">Leetcode</dt>
+                    <dd><a href="https://www.google.com" alt="leetcode logo">profile name</a></dd>
+                    <dt><img src="file path">Codewars</dt>
+                    <dd><a href="https://www.google.com" alt="codewars logo">profile name</a></dd>
+                </dl>      
+            </div>
+
             <button>Contact Me</button> 
+            <p>copyright @2025</p> 
         </footer>
     </body>
 </html>

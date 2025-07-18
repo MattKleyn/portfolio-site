@@ -13,7 +13,7 @@
     <body>
         <header>
             <nav id="nav-bar">
-                <img src="./logo.svg" height="50" alt="My personal brand logo">
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
                 <ul id="nav-list" class="nav-list">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="./portfolio.html">Portfolio</a></li>
@@ -29,11 +29,11 @@
                     <h1 id="name">Matthew Kleynhans</h1>
                     <h2 id="title-description">Full stack web designer & developer</h2>
                     <ul>
-                        <li><a href="www.mail.co"><img src="file path" alt="gmail logo"></a></li>
-                        <li><a href="file path"><img src="file path" alt="Johannesburg pin"></a></li>             
-                        <li><a href="www.linkedin.com"><img src="file path" alt="linked-in logo"></a></li>
-                        <li><a href="https://www.github.com"><img src="file path" alt="github logo"></a></li>
-                        <li><a href=""><img src="file path" alt="resume download"></a></li>
+                        <li><a href="www.mail.co"><img src="./assets/email_24px_rounded.svg" alt="email icon"></a></li>
+                        <li><a href="file path"><img src="./assets/location_on_24px_rounded.svg" alt="Johannesburg pin"></a></li>             
+                        <li><a href="www.linkedin.com"><img src="./assets/Linkedin Icon Streamline SVG Logos.svg" alt="linked-in logo"></a></li>
+                        <li><a href="https://www.github.com"><img src="./assets/Github Streamline Unicons Line.svg" alt="github logo"></a></li>
+                        <li><a href=""><img src="./assets/download_24px_rounded.svg" alt="resume download"></a></li>
                     </ul> 
                 </div>  
                 <img src="./mepic.jpg" height="400" alt="A nice clean headshot of myself">             
@@ -139,41 +139,46 @@
                 <a href="./portfolio.html">See More Projects</a>
             </section>
 
-            <article id="background">
+            <article id="background" class="background">
                 <h2>About Me</h2>
                 <p>Long story short, I worked in construction for 8 years before getting into programming. I have learnt HTML and CSS to a comfortable proficiency, and am currently learning Javascript and Python on the backend, with more stuff on the horizon. My goal is to learn Web Design and Development across the entire stack, from conceptual design briefs with clients, building the structure and styling the website, to programming all the backend code to interact with servers and databases. I am also aiming to learn and implement machine learning into the websites codebase to create better user experiences.</p>
             
-                <img src="" alt="Growing my own vegetables in my backyard">
-                <img src="" alt="Drawing and Painting">
-                <img src="" alt="Cooking">
-                <img src="" alt="Playing the guitar (badly)">
-                <img src="" alt="Beatboxing (also badly)">
-                <img src="" alt="Reading comics, manga, novels">
-                <img src="" alt="Cycling">
-                <img src="" alt="Smashing in Video Games">
-                <img src="" alt="Getting smashed in Magic the Gathering">
-                <img src="" alt="Building scale models">
+                <div>
+                    <img src="./mepic.jpg" alt="Growing my own vegetables in my backyard">
+                    <img src="./mepic.jpg" alt="Drawing and Painting">
+                    <img src="./mepic.jpg" alt="Cooking">
+                    <img src="./mepic.jpg" alt="Playing the guitar (badly)">
+                    <img src="./mepic.jpg" alt="Beatboxing (also badly)">
+                    <img src="./mepic.jpg" alt="Reading comics, manga, novels">
+                    <img src="./mepic.jpg" alt="Cycling">
+                    <img src="./mepic.jpg" alt="Smashing in Video Games">
+                    <img src="./mepic.jpg" alt="Getting smashed in Magic the Gathering">
+                    <img src="./mepic.jpg" alt="Building scale models">
+                </div>
             </article>
         </main>
 
-        <footer id="contactme">
-            <img src="./logo.svg" height="50" alt="My personal brand logo">
+        <footer id="contactme" class="contactme">
+            <div>
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
                 <dl>
                     <dt>Email</dt><!--should be address tag?-->
                     <dd>mail@gmail.com</dd> <!--maybe do as qr code for safety?-->
                     <dt>Cell No</dt>
                     <dd>numbah</dd>
-                    <dt><img src="file path">LinkedIn</dt>
+                    <dt><img src="./assets/Linkedin Icon Streamline SVG Logos.svg">LinkedIn</dt>
                     <dd><a href="https://www.google.com" alt="linked-in logo">profile name</a></dd>
-                    <dt><img src="file path">Github</dt>
+                    <dt><img src="./assets/Github Streamline Unicons Line.svg">Github</dt>
                     <dd><a href="https://www.google.com" alt="github logo">profile name</a></dd>
                     <dt><img src="file path">Leetcode</dt>
                     <dd><a href="https://www.google.com" alt="leetcode logo">profile name</a></dd>
                     <dt><img src="file path">Codewars</dt>
                     <dd><a href="https://www.google.com" alt="codewars logo">profile name</a></dd>
-                </dl>
-            <p>copyright @2025</p>                
-            <button>Contact Me</button>    
+                </dl>      
+            </div>
+
+            <button>Contact Me</button> 
+            <p>copyright @2025</p> 
         </footer>
     </body>
 </html>

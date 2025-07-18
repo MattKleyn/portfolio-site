@@ -1,4 +1,4 @@
-@layer reset, base, navigation, components;
+@layer reset, base, navigation, components, resume;
 
 /*reset*/
 @layer reset {
@@ -119,11 +119,13 @@
             padding: 6rem 160px; 
             gap: 4rem;
             align-items: center;
+            overflow: hidden;
             
 
             & > img, div {
                 width: 100vw;
                 max-width: 700px;
+                object-fit: cover;
             }      
 
             ul {
@@ -238,11 +240,101 @@
         }
 
         /*about me section*/
+        .background {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--background-light);
+            padding: 6rem 160px;
+            gap: 4rem;
+            
+            h2, div {
+               text-align: center; 
+            }
 
+            div > img {
+                width: 265px;
+                height: 265px;
+                object-fit: cover;
+                border-radius: 0.5rem;
+                margin: 0.5rem;
+            }
+        }
+    }
 
+    /*footer*/
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 6rem 160px;
+        gap: 2rem;
+        justify-content: space-between;
+        background-color: var(--background-dark);
+        color: var(--text-light);
+        font-family: "Red Rose", serif;
+        font-size: 1.5rem;
+        font-weight: 300;
 
-        /*footer*/
+        button{
+            background-color: #007EA7;
+            border-radius: 100px;
+            padding: 0.5rem 3rem;
+            color: var(--text-light);
+            height: fit-content;
 
+            &:hover {
+                background-color: #003459;
+            }            
+        }
     }
 }
 
+@layer resume {
+    .resume-main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        
+        .banner {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 0px 160px;
+            gap: 1.5rem;
+
+            h1 {
+                font-size: 1.5rem;
+                letter-spacing: initial;
+            }
+
+            h4 {
+                font-weight: 300;
+            }
+
+            dl {
+                display: flex;
+                gap: 2rem;
+                justify-content: space-between;
+                font-family: "Red Rose", serif;
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+
+        .resume-aboutme {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 160px;
+            gap: 1.5rem;        
+        }
+
+        .resume-skills {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 160px;
+            gap: 1rem;             
+        }
+
+
+
+    }
+}
