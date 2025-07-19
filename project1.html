@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 1</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Red+Rose:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav-bar">
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./resume.html">Resume</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="project1" class="project1">
+                <h2 id="title-description">Project Name A</h2><!--I think this in EJS script would be the best, CMS can be subject to the get requests and that way only need on card.html which will update contents depending on project, instead of x many .html pages for each project that will have to be set up every single time-->   
+                <img src="./" alt="project teaser image">
+            </section>    
+
+            <section id="overiew" class="overview">    
+                <h2>Overview</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi placeat a rem repudiandae quae? Deserunt hic, nemo placeat id odit impedit ipsam vel eaque inventore, omnis voluptate veniam excepturi fugiat?</p>
+            </section>    
+
+            <section id="problems-solutions" class="problems-solutions">    
+                <h2>Problems and solutions</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, atque amet similique provident debitis alias omnis quam pariatur quos blanditiis voluptates architecto aliquam dicta nihil necessitatibus, et iste nobis deleniti!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam dolor harum commodi tenetur itaque ipsam hic voluptate maiores sunt, delectus pariatur saepe officia expedita quos dolorum, laboriosam enim. Qui, id!</p>
+            </section>    
+
+            <section id="key-features" class="key-features">    
+                <h2>Key features</h2>
+                <ul class="key-features">
+                    <li>GPS</li>
+                    <li>AI chat</li>
+                    <li>Adaptive learning</li>
+                    <li>Personalized recommendations based on previous purchases</li>
+                    <li>Profit forcasting</li>
+                    <li>Progressive breaking</li>
+                </ul>
+            </section>
+
+            <section id="skills" class="skills">
+                <h2>Tech stack</h2>
+
+                <div class="skill-container">
+                    <div>
+                        <h3>Frontend</h3>
+                        <ol>
+                            <li>HTML</li>
+                            <li>CSS<ol>
+                                <li>Bootstrap</li>
+                            </ol></li>
+                            <li>Javascript
+                                <ol>
+                                    <li>JQuery</li>
+                                    <li>Node.js</li>
+                                    <li>EJS</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3>Backend</h3>
+                        <ol>
+                            <li>Python</li>
+                            <li>Javascript</li>
+                        </ol>             
+                    </div>
+
+                    <div>
+                        <h3>Tools</h3>
+                        <ol>
+                            <li>Figma</li>
+                            <li>Webflow</li>
+                            <li>Git</li><!--is this even neccessary to mention?-->
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3>Concepts</h3>
+                        <ol>
+                            <li>Design principles</li>
+                            <li>UX/UI</li>
+                        </ol>            
+                    </div>     
+                </div>
+            </section>
+
+            <section>    
+                <a href="">See frontend</a>
+                <a href="">See backend</a>
+                <a href="">Prev project</a>
+                <h3>Projects</h3>
+                <a href="">Next project</a>        
+            </section>
+        </main>
+        
+        <footer id="contactme" class="contactme">
+            <div>
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo" class="logo-img">
+                <a href="https://www.google.com"><img src="./assets/email_24px_rounded-white.svg" alt="email logo">email@email.com</a><!--should be address tag?-->
+                <a href="https://www.google.com"><img src="./assets/call_24px_rounded-white.svg" alt="cell logo">1234567890</a><!--maybe do as qr code for safety?-->
+                <a href="https://www.google.com"><img src="./assets/Linkedin Icon Streamline SVG Logos-white.svg" alt="linked-in logo">linkedin profile</a>
+                <a href="https://www.google.com"><img src="./assets/Github Streamline Unicons Line-white.svg" alt="github logo">github profile</a>
+                <!--
+                <a href="https://www.google.com"><img src="file path" alt="leetcode logo">leetcode profile</a>
+                <a href="https://www.google.com"><img src="file path" alt="codewars logo">codewars profile</a>
+                -->    
+            </div>
+
+            <button>Contact Me</button> 
+            <p>&copy;2025</p> 
+        </footer>
+    </body>
+</html>

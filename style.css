@@ -95,7 +95,6 @@
             font-family: "Red Rose", serif;
             font-size: 3rem;
             font-weight: 300;
-            /*margin-bottom: 6rem;*/
         }
 
         h3 {
@@ -105,7 +104,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /*hero h2*/
+        /*hero h2 and project name h2, same id applied.*/
         #title-description {
                 font-family: "Ibarra Real Nova", serif;
         }
@@ -133,16 +132,21 @@
 
                 li {
                     display: inline;
+                    margin: 1rem;  
+                    
+                    a img {
+                        opacity: 60%;
+                        width: 1.5rem;
+                    }
                 }
             }
         }
 
-        /*skills section*/
+        /*Home skills section & project tech stack. Same class and id applied.*/
         .skills {
             padding: 6rem 160px;
             background-color: var(--background-light);
             
-
             h2 {
                 display: flex;
                 justify-content: center;
@@ -271,8 +275,6 @@
         background-color: var(--background-dark);
         color: var(--text-light);
         font-family: "Red Rose", serif;
-        font-size: 1.5rem;
-        font-weight: 300;
 
         button{
             background-color: #007EA7;
@@ -280,10 +282,26 @@
             padding: 0.5rem 3rem;
             color: var(--text-light);
             height: fit-content;
+            font-size: 1rem;
 
             &:hover {
                 background-color: #003459;
             }            
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-start;
+
+            .logo-img {
+                margin-bottom: 3rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
         }
     }
 }
@@ -292,7 +310,8 @@
     .resume-main {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 4rem;
+        margin-bottom: 5rem;
         
         .banner {
             display: flex;
@@ -307,12 +326,14 @@
             }
 
             h4 {
+                font-family: "Red Rose", sans-serif;                
                 font-weight: 300;
             }
 
-            dl {
+            div {
                 display: flex;
-                gap: 2rem;
+                flex-wrap: wrap;
+                gap: 1rem 2rem;
                 justify-content: space-between;
                 font-family: "Red Rose", serif;
                 font-size: 1rem;
@@ -320,7 +341,7 @@
             }
         }
 
-        .resume-aboutme {
+        .resume-aboutme, .resume-portfolio {
             display: flex;
             flex-direction: column;
             padding: 0px 160px;
@@ -332,9 +353,55 @@
             flex-direction: column;
             padding: 0px 160px;
             gap: 1rem;             
+
+            div {
+                line-height: 0.5rem;
+
+                div {
+                    display: flex;
+                    align-items: center;
+  
+                    h3 {
+                        width: 180px;
+                    }
+                }
+            }
         }
 
+        .workbackground {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 160px;
+            gap: 1.5rem;         
 
+            div {
+                gap: 1rem;
+                font-family: "Roboto Flex", sans-serif;
+                font-size: 1.5rem; 
+                font-weight: 300;
+                list-style: none;
+                line-height: 2rem;                
+                
+                div {
+                display: flex;
+                justify-content:space-between;
+                }
+            
+                ul {
+                    list-style: disc;
+                }            
+            }
+        }
 
+        .education {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 160px;
+            gap: 1.5rem;
+            
+            p {
+                line-height: 1rem;
+            }
+        }
     }
 }
