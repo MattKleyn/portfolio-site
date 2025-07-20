@@ -1,4 +1,4 @@
-@layer reset, base, navigation, components, resume;
+@layer reset, base, navigation, components, resume, projectdetails;
 
 /*reset*/
 @layer reset {
@@ -56,6 +56,7 @@
         color: var(--text-light);        
         position: sticky;
         top: 0;
+        z-index: 1;
 
        nav {
             display: flex;
@@ -81,7 +82,6 @@
 }
 
 @layer components {
-
     main {
         /*heading globals*/            
         h1 {
@@ -142,7 +142,7 @@
             }
         }
 
-        /*Home skills section & project tech stack. Same class and id applied.*/
+        /*Home skills section.*/
         .skills {
             padding: 6rem 160px;
             background-color: var(--background-light);
@@ -306,6 +306,7 @@
     }
 }
 
+/*resume styling*/
 @layer resume {
     .resume-main {
         display: flex;
@@ -313,6 +314,7 @@
         gap: 4rem;
         margin-bottom: 5rem;
         
+        /*personal details section*/
         .banner {
             display: flex;
             flex-direction: column;
@@ -403,5 +405,70 @@
                 line-height: 1rem;
             }
         }
+    }
+}
+
+/*project template styling*/
+@layer projectdetails {
+    .project-main {
+        display: flex;
+        flex-direction: column;
+        padding: 0.7rem 160px 6rem 160px;/*top padding is 6rem-height of H2(84px)*/
+        background-color: var(--background-light);
+        gap: 6rem;
+
+        .project {
+            h2 {
+                position: relative; /*if static then z-index with img doesnt work*/
+                top: 84px;
+                color: var(--text-dark);
+                background-color: rgba(255 255, 255, 0.1);/*Semi-transparent background*/
+                backdrop-filter: blur(5px);/*Blurs the background behind the element*/
+                border-radius: 0.5rem;
+            }
+
+            img {
+                width: 100%;
+                max-height: 600px;
+                object-fit: cover;
+                border-radius: 0.5rem;
+            }            
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .features-list {
+            font-family: "Roboto Flex", sans-serif;
+            font-size: 1.5rem; 
+            font-weight: 300;
+            line-height: 2rem;                      
+        }
+
+        .project-stack {
+            .tech-container {
+                display: flex;
+                gap: 4rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                li {
+                    font-family: "Roboto Flex", sans-serif;
+                    font-size: 1.5rem; 
+                    font-weight: 300;
+                    list-style: none;
+                    line-height: 2rem; /*Design is gap 12px, but seems congested*/
+                }
+            }
+        }
+
+        /*pagination and front/backend links*/
+
+
+
+
+
     }
 }
