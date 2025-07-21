@@ -402,7 +402,7 @@
             gap: 1.5rem;
             
             p {
-                line-height: 1rem;
+                line-height: 1.5rem;
             }
         }
     }
@@ -465,7 +465,35 @@
         }
 
         /*pagination and front/backend links*/
+        .links-pagination {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
 
+            .links {
+                display: flex;
+                justify-content: center;
+                gap: 6rem;
+
+                a {
+                    background-color: #00A9E0;
+                    color: var(--text-dark);
+                    border-radius: 5rem;
+                    padding: 0.5rem 1.5rem;
+                    text-align: center;
+                }
+            }
+
+            .pagination {
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
 
 
 
