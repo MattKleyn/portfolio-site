@@ -1,0 +1,9 @@
+/*ignore moodboard and figma resources and examples*/
+moodboard/
+resources/
+my_resume.code-workspace
+resume.txt
+mepic.jpg
+project3.html
+project4.html
+project5.html

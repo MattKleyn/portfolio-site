@@ -312,7 +312,8 @@
         display: flex;
         flex-direction: column;
         gap: 4rem;
-        margin-bottom: 5rem;
+        padding: 5rem 0rem 5rem 0rem;
+        background-color: var(--background-light);
         
         /*personal details section*/
         .banner {
