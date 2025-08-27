@@ -8,52 +8,42 @@
     }
 
     html, body {
+        font-family: var(--var-font-fam-p);
         font-size: 16px;
-    }
-
-    p {
-        font-family: "Roboto Flex", sans-serif;
-        font-size: 1.5rem;
-        font-weight: 300;
-        line-height: 2rem;
-        margin-bottom: 1.5rem;
     }
 }
 
 /*colour variables*/
 @layer base {
     :root {
-        --background-color: FFFFFFF;
-        --background-dark: #00171F;
-        --background-light: #F6F7EB;
-        --text-dark: #00171F; 
-        --text-light: #F6F7EB;
-        --accent-color: #007EA7;
-        --accent-dark: #003459;
-        --text-LG: 2.5rem;
-        --text-M: 2rem;
-        --text-S: 1.5rem;
-        --text-caption: 1rem;
+        --background-color-primary: #FAFAFA;
+        --background-color-secondary: #D4D4D4;
+        --background-color-alternate: #1A1A1A;
+        --background-color-navfoot: #050505;
+        --text-color-primary: #050505; 
+        --text-color-secondary: #FAFAFA;
+        --text-color-alternate: #373737;
+        --accent-color: #8ACEFF;
+        --accent-dark: #171E23;
+        --font-size-LG: 2rem;
+        --font-size-M: 1.5rem;
+        --font-size-S: 1rem;
+        --font-size-caption: 1rem;
+        --var-font-fam-h1: "Bebas Neue", sans-serif;
+        --var-font-fam-h2alternate: "Ibarra Real Nova", serif;
+        --var-font-fam-headings: "Red Rose", serif;
+        --var-font-fam-a: "Red Rose", serif;
+        --var-font-fam-body: "Roboto Flex", sans-serif;
     }
 
     body {
-        color: var(--text-dark);
+        color: var(--text-color-primary);
+        background-color: var(--background-color-primary);
     }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-        font-family: "Red Rose", serif;
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-
 }
 
 @layer navigation {
-    header {
-        background-color: var(--background-dark);
-        color: var(--text-light);        
+    header {      
         position: sticky;
         top: 0;
         z-index: 1;
@@ -62,15 +52,11 @@
             display: flex;
             justify-content: space-between;
             padding: 1rem 160px;
-            
+
             ul {
-                list-style: none;
                 display: inline-flex;
                 align-items: center;
                 gap: 1.5rem;
-                font-size: var(--text-S);
-                font-family: "Red Rose", sans-serif;
-                font-weight: 300;
 
                 li:hover {
                     opacity: 80%;
@@ -82,61 +68,155 @@
 }
 
 @layer components {
-    main {
+    body {
         /*heading globals*/            
         h1 {
-            font-family: "Bebas Neue", sans-serif;
+            font-family: var(--var-font-fam-h1);
             font-size: 6rem;
             font-weight: 500;
-            letter-spacing: 2rem; /*calcs to 3rem, to test*/
+            letter-spacing: 43%;
         }
         
         h2 {
-            font-family: "Red Rose", serif;
-            font-size: 3rem;
-            font-weight: 300;
+            font-family: var(--var-font-fam-headings);
+            font-size: 4rem;
+            font-weight: 400;
         }
 
         h3 {
-            font-family: "Red Rose", serif;
+            font-family: var(--var-font-fam-headings);
+            font-size: 3rem;
+            font-weight: 400;
+        }
+
+        h4 {
+            font-family: var(--var-font-fam-headings);
             font-size: 2rem;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
+            font-weight: 400;
         }
 
         /*hero h2 and project name h2, same id applied.*/
         #title-description {
-                font-family: "Ibarra Real Nova", serif;
+                font-family: var(--var-font-fam-h2alternate);
+                letter-spacing: 18%;
         }
 
+        /*section style global*/
+        section, footer, article {
+            padding: 6rem 10rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6rem; 
+        }
+
+        /*Paragraph style global*/
+        p {
+            font-family: var(--var-font-fam-body);
+            font-size: var(--font-size-M);
+            font-weight: 300;
+            line-height: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /*list style global*/
+        ol, ul {
+            font-family: var(--var-font-fam-body);
+            font-size: var(--font-size-M); 
+            font-weight: 300;
+            line-height: 2rem; /*Design is gap 12px, but seems congested*/
+            list-style: none;
+            
+            li {
+                margin-block: 1rem;
+            }
+        }
+
+        /*resume work background*/
+            .style-visible {
+                list-style: disc;
+            }            
+
+        /*Link style global*/
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-family: var(--var-font-fam-a);
+            font-size: var(--font-size-M);
+            font-weight: 300;
+        } 
+
+        /*Button styles global*/
+        #button-style {
+            background-color: var(--background-color-alternate);
+            color: var(--text-color-secondary);
+            padding: 0.5rem 3rem;
+            height: fit-content;
+            width: fit-content;
+            border-radius: 5rem;
+            text-align: center;
+            font-weight: 400;
+            /*drop shadow*/
+            
+            &:hover {
+                background-color: var(--accent-color);
+                color: var(--text-color-alternate);
+            }  
+        }
+
+        /*Colour theme class globals*/
+        .light-on-dark {
+            background-color: var(--background-color-navfoot);
+            color: var(--text-color-secondary);
+        }
+
+        .dark-on-light {
+            background-color: var(--background-color-primary);
+            color: var(--text-color-alternate);
+
+            h2, h3, h4 {
+                color: var(--text-color-primary);
+            }
+        }
+
+        .light-on-dark-alternate {
+            background-color: var(--background-color-alternate);
+            color: var(--text-color-secondary);
+        }
+
+        .dark-on-light-alternate {
+            background-color: var(--background-color-secondary);
+            color: var(--text-color-alternate);
+
+            h2, h3, h4 {
+                color: var(--text-color-primary);
+            }
+        }
+    }
+
+    main {
         /*hero section*/
         .hero {
-            display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
-            background-color: var(--background-light);
-            padding: 6rem 160px; 
-            gap: 4rem;
             align-items: center;
             overflow: hidden;
-            
 
-            & > img, div {
-                width: 100vw;
+            & > img, div { /*regression*/
+                width: 100%;
                 max-width: 700px;
                 object-fit: cover;
             }      
 
             ul {
+                display: flex;
                 margin-top: 1rem;
 
                 li {
-                    display: inline;
-                    margin: 1rem;  
+                    margin-inline: 1rem;  
                     
-                    a img {
+                    a img {/*color to be off-white*/
                         opacity: 60%;
                         width: 1.5rem;
+                        
                     }
                 }
             }
@@ -144,13 +224,9 @@
 
         /*Home skills section.*/
         .skills {
-            padding: 6rem 160px;
-            background-color: var(--background-light);
-            
             h2 {
                 display: flex;
                 justify-content: center;
-                margin-bottom: 6rem;
             }
 
             .skill-container {
@@ -158,14 +234,6 @@
                 gap: 4rem;
                 flex-wrap: wrap;
                 justify-content: center;
-                
-                li {
-                    font-family: "Roboto Flex", sans-serif;
-                    font-size: 1.5rem; 
-                    font-weight: 300;
-                    list-style: none;
-                    line-height: 2rem; /*Design is gap 12px, but seems congested*/
-                }
 
                 #future-skills {
                     display: none;
@@ -175,11 +243,7 @@
 
         /*featured work section & porfolio.html*/
         .portfolio {
-            display: flex;
             flex-direction: column;
-            padding: 6rem 160px;
-            background-color: var(--background-light);
-            gap: 4rem;
             
             h2 {
                text-align: center; 
@@ -188,19 +252,6 @@
             .alternate {
                 flex-direction: row-reverse;
             }  
-
-            & > a {
-                text-align: end;
-                background-color: #007EA7;
-                border-radius: 100px;
-                padding: 0.5rem 3rem;
-                /*max-width: fit-content;*//*resets alignment for some reason*/
-                color: var(--text-light);
-                
-                &:hover {
-                    background-color: #003459;
-                }                
-            }
 
             .portfolio-card {
                 display: flex;
@@ -214,30 +265,14 @@
                 & > div {
                     width: 45%;
                     align-content: center;
-                
-                    a {
-                        background-color: #007EA7;
-                        border-radius: 100px;
-                        padding: 0.5rem 3rem;
-                        color: var(--text-light);
-
-                        &:hover {
-                            background-color: #003459;
-                        }
-                    }
 
                     /*portfolio.html card tech stack*/
                     .project-stack {
                         display: flex;
                         flex-wrap: wrap;
                         flex-direction: row;
-                        list-style: none;
                         margin-bottom: 1.5rem;
-                        gap: 1rem;
-                        font-family: "Roboto Flex", sans-serif;
-                        font-size: 1rem; 
-                        font-weight: 200;
-                        line-height: 2rem; /*Design is gap 12px, but seems congested*/                        
+                        gap: 1rem;                    
                     }
                 }
             }
@@ -245,11 +280,7 @@
 
         /*about me section*/
         .background {
-            display: flex;
             flex-direction: column;
-            background-color: var(--background-light);
-            padding: 6rem 160px;
-            gap: 4rem;
             
             h2, div {
                text-align: center; 
@@ -267,27 +298,8 @@
 
     /*footer*/
     footer {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 6rem 160px;
-        gap: 2rem;
         justify-content: space-between;
-        background-color: var(--background-dark);
-        color: var(--text-light);
-        font-family: "Red Rose", serif;
-
-        button{
-            background-color: #007EA7;
-            border-radius: 100px;
-            padding: 0.5rem 3rem;
-            color: var(--text-light);
-            height: fit-content;
-            font-size: 1rem;
-
-            &:hover {
-                background-color: #003459;
-            }            
-        }
+        font-family: var(--var-font-fam-a);
 
         div {
             display: flex;
@@ -309,18 +321,12 @@
 /*resume styling*/
 @layer resume {
     .resume-main {
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
-        padding: 5rem 0rem 5rem 0rem;
         background-color: var(--background-light);
         
         /*personal details section*/
         .banner {
-            display: flex;
             flex-direction: column;
             text-align: center;
-            padding: 0px 160px;
             gap: 1.5rem;
 
             h1 {
@@ -345,17 +351,11 @@
         }
 
         .resume-aboutme, .resume-portfolio {
-            display: flex;
-            flex-direction: column;
-            padding: 0px 160px;
-            gap: 1.5rem;        
+            flex-direction: column;    
         }
 
         .resume-skills {
-            display: flex;
-            flex-direction: column;
-            padding: 0px 160px;
-            gap: 1rem;             
+            flex-direction: column;            
 
             div {
                 line-height: 0.5rem;
@@ -372,35 +372,23 @@
         }
 
         .workbackground {
-            display: flex;
-            flex-direction: column;
-            padding: 0px 160px;
-            gap: 1.5rem;         
+            flex-direction: column;       
 
             div {
-                gap: 1rem;
-                font-family: "Roboto Flex", sans-serif;
-                font-size: 1.5rem; 
-                font-weight: 300;
-                list-style: none;
-                line-height: 2rem;                
-                
                 div {
                 display: flex;
                 justify-content:space-between;
+                gap: 1rem;
+                }    
+                
+                li {
+                    list-style-type: disc;
                 }
-            
-                ul {
-                    list-style: disc;
-                }            
             }
         }
 
         .education {
-            display: flex;
             flex-direction: column;
-            padding: 0px 160px;
-            gap: 1.5rem;
             
             p {
                 line-height: 1.5rem;
@@ -412,20 +400,17 @@
 /*project template styling*/
 @layer projectdetails {
     .project-main {
-        display: flex;
         flex-direction: column;
-        padding: 0.7rem 160px 6rem 160px;/*top padding is 6rem-height of H2(84px)*/
-        background-color: var(--background-light);
-        gap: 6rem;
 
-        .project {
+        .project {/*regression??*/
             h2 {
                 position: relative; /*if static then z-index with img doesnt work*/
                 top: 84px;
-                color: var(--text-dark);
+                color: var(--text-color-primary);
                 background-color: rgba(255 255, 255, 0.1);/*Semi-transparent background*/
                 backdrop-filter: blur(5px);/*Blurs the background behind the element*/
                 border-radius: 0.5rem;
+                text-align: center;
             }
 
             img {
@@ -438,51 +423,28 @@
 
         h2 {
             margin-bottom: 1.5rem;
-            text-align: center;
+            
         }
 
-        .features-list {
-            font-family: "Roboto Flex", sans-serif;
-            font-size: 1.5rem; 
-            font-weight: 300;
-            line-height: 2rem;                      
+        .features-list, .problems-list {
+            list-style: disc;                     
         }
 
-        .project-stack {
-            .tech-container {
-                display: flex;
-                gap: 4rem;
-                flex-wrap: wrap;
-                justify-content: center;
-                
-                li {
-                    font-family: "Roboto Flex", sans-serif;
-                    font-size: 1.5rem; 
-                    font-weight: 300;
-                    list-style: none;
-                    line-height: 2rem; /*Design is gap 12px, but seems congested*/
-                }
-            }
+        .tech-container {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         /*pagination and front/backend links*/
         .links-pagination {
-            display: flex;
             flex-direction: column;
-            gap: 6rem;
 
             .links {
                 display: flex;
                 justify-content: center;
                 gap: 6rem;
-
-                a {
-                    background-color: #00A9E0;
-                    color: var(--text-dark);
-                    border-radius: 5rem;
-                    padding: 0.5rem 1.5rem;
-                    text-align: center;
-                }
             }
 
             .pagination {
@@ -495,9 +457,5 @@
                 }
             }
         }
-
-
-
-
     }
 }

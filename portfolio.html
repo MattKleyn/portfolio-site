@@ -12,7 +12,7 @@
 
     <body>
         <header>
-            <nav id="nav-bar">
+            <nav id="nav-bar" class="light-on-dark">
                 <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
                 <ul id="nav-list" class="nav-list">
                     <li><a href="./index.html">Home</a></li>
@@ -24,7 +24,7 @@
         </header>
         
         <main>
-            <section id="portfolio" class="portfolio">
+            <section id="portfolio" class="portfolio light-on-dark-alternate">
                 <h2>Portfolio</h2><!--I think this in EJS script would be the best, CMS can be subject to the get requests and that way only need on card.html which will update contents depending on project, instead of x many .html pages for each project that will have to be set up every single time-->   
 
                 <div class="portfolio-card">
@@ -37,7 +37,7 @@
                             <li>CSS</li>
                             <li>Git</li>
                         </ul>
-                        <a href="./project1.html">Details</a>
+                        <a href="./project1.html" id="button-style">Details</a>
                     </div>
                     <img src="./assets/portfolio_hero_image.png" alt="project teaser image">
                 </div>
@@ -55,7 +55,7 @@
                             <li>Express</li>
                             <li>Git</li>
                         </ul>                        
-                        <a href="./project2.html">Details</a>
+                        <a href="./project2.html" id="button-style">Details</a>
                     </div>
                     <img src="./assets/portfolio_hero_concept.png" alt="project teaser image">
                 </div>
@@ -72,7 +72,7 @@
                             <li>Express</li>
                             <li>EJS</li>
                         </ul>                        
-                        <a href="./project3.html">Details</a>
+                        <a href="./project3.html" id="button-style">Details</a>
                     </div>
                     <img src="./mepic.jpg" alt="project teaser image">
                 </div>        
@@ -89,7 +89,7 @@
                             <li>Express</li>
                             <li>EJS</li>
                         </ul>                        
-                        <a href="./project4.html">Details</a>
+                        <a href="./project4.html" id="button-style">Details</a>
                     </div>
                     <img src="./mepic.jpg" alt="project teaser image">
                 </div>
@@ -106,21 +106,21 @@
                             <li>Express</li>
                             <li>EJS</li>
                         </ul>                        
-                        <a href="./project5.html">Details</a>
+                        <a href="./project5.html" id="button-style">Details</a>
                     </div>
                     <img src="./mepic.jpg" alt="project teaser image">
                 </div>         
             </section>
         </main>
         
-        <footer id="contactme" class="contactme">
+        <footer id="contactme" class="light-on-dark">
             <div>
                 <img src="./assets/logo.svg" height="50" alt="My personal brand logo" class="logo-img">
                 <a href="https://www.linkedin.com/in/matthew-kleynhans-00242195"><img src="./assets/Linkedin Icon Streamline SVG Logos-white.svg" alt="linked-in logo">linkedin profile</a>
                 <a href="https://github.com/MattKleyn"><img src="./assets/Github Streamline Unicons Line-white.svg" alt="github logo">github profile</a>   
             </div>
 
-            <button>Contact Me</button> 
+            <button id="button-style">Contact Me</button> 
             <p>&copy;2025</p> 
         </footer>
     </body>
