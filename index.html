@@ -12,9 +12,9 @@
 
     <body>
         <header>
-            <nav id="nav-bar" class="light-on-dark">
+            <nav class="light-on-dark">
                 <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
-                <ul id="nav-list" class="nav-list">
+                <ul>
                     <li><a href="#hero">Home</a></li>
                     <li><a href="./portfolio.html">Portfolio</a></li>
                     <li><a href="./resume.html">Resume</a></li>
@@ -24,7 +24,7 @@
         </header>
 
         <main>
-            <section id="hero" class="light-on-dark">
+            <section class="section_hero light-on-dark">
                 <div>    
                     <h1 id="name">Matthew Kleynhans</h1>
                     <h2 id="title-description">Frontend web designer & developer</h2>
@@ -35,17 +35,24 @@
                         <li><a href=""><img src="./assets/download_24px_rounded-black.svg" alt="resume download"></a></li>
                     </ul> 
                 </div>  
-                <img src="./mepic.jpg" height="400" alt="A nice clean headshot of myself">             
+                <div>
+                    <img src="./mepic.jpg" height="500" alt="A headshot of myself"> 
+                </div>    
             </section>
 
-            <article id="background" class="background dark-on-light-alternate">
+            <article class="background dark-on-light-alternate">
                 <h2>About Me</h2>
-                <img src="" alt="a photo of me onsite">
-                <p>After graduating from university in 2015, I began my career as a Site Engineer with one of South Africa's Big 5 construction firms. In this onsite management role, I was responsible for translating consultant designs into reality, coordinating multidisciplinary teams, and ensuring quality standards were met across diverse project environments.</p>
-                <p>Each site introduced new workflows, documentation styles, and technologies—many of which were inconsistent, inefficient, or poorly suited to real-world conditions. These recurring frustrations resulted in me saying to my teams: “One day, I'm going to build an app that actually works for us onsite.” That idea stayed with me and thus the seeds were planted, however I could not find the time to learn how to code and make my own software solution.</p>
-                <p>After eight years in construction management, I took a step back to recalibrate. What followed was a period of deep reflection, experimentation, and growth. I explored art, design, and trading—but I eventually returned to that original idea and began learning to code. Since then, I've immersed myself in programming fundamentals, frontend and backend development, UX/UI design, accessibility, and no-code tools. What started as curiosity has evolved into a clear career direction: software development with a focus on thoughtful, user-centered systems.</p>
-                <p>My current strengths lie in Frontend Design and Development, but I'm actively expanding toward full-stack capabilities and machine learning integration to better understand and assist the user experience. I bring with me a wealth of transferable experience—strategic planning, systems thinking, multi-disciplinary coordination, change management and constructability analysis. It's an ambitious goal, it's long term, It demands grit and growth…it's <em>my</em> goal. And this goal will enable me to finally make that app I wanted to make for so long.</p>
-                <div>
+                <div class="grid">
+                    
+                    <p>After graduating from university in 2015, I began my career as a Site Engineer with one of South Africa's Big 5 construction firms. In this onsite management role, I was responsible for translating consultant designs into reality, coordinating multidisciplinary teams, and ensuring quality standards were met across diverse project environments.</p>
+                    <div class="about_pic">
+                        <img src="./mepic.jpg" alt="a photo of me onsite">
+                    </div>
+                    <p>Each site introduced new workflows, documentation styles, and technologies—many of which were inconsistent, inefficient, or poorly suited to real-world conditions. These recurring frustrations resulted in me saying to my teams: “One day, I'm going to build an app that actually works for us onsite.” That idea stayed with me and thus the seeds were planted, however I could not find the time to learn how to code and make my own software solution.</p>
+                    <p>After eight years in construction management, I took a step back to recalibrate. What followed was a period of deep reflection, experimentation, and growth. I explored art, design, and trading—but I eventually returned to that original idea and began learning to code. Since then, I've immersed myself in programming fundamentals, frontend and backend development, UX/UI design, accessibility, and no-code tools. What started as curiosity has evolved into a clear career direction: software development with a focus on thoughtful, user-centered systems.</p>
+                    <p>My current strengths lie in Frontend Design and Development, but I'm actively expanding toward full-stack capabilities and machine learning integration to better understand and assist the user experience. I bring with me a wealth of transferable experience—strategic planning, systems thinking, multi-disciplinary coordination, change management and constructability analysis. It's an ambitious goal, it's long term, It demands grit and growth…it's <em>my</em> goal. And this goal will enable me to finally make that app I wanted to make for so long.</p>
+                </div>
+                <div class="hobbies">
                     <img src="./mepic.jpg" alt="Cycling">
                     <img src="./mepic.jpg" alt="Growing my own vegetables in my backyard">
                     <img src="./mepic.jpg" alt="Drawing and Painting">
@@ -59,7 +66,7 @@
                 </div>
             </article>
 
-            <section id="skills" class="skills dark-on-light">
+            <section class="section_skills dark-on-light">
                 <h2 >Skillset</h2>
 
                 <div class="skill-container">
@@ -110,11 +117,7 @@
                         <h3>Tools</h3>
                         <ol>
                             <li>Figma</li>
-                            <li>Webflow
-                                <ul>
-                                    <li>Client First</li>
-                                </ul>
-                            </li>
+                            <li>Webflow</li>
                             <li>Git</li>
                             <li>Postman</li>
                         </ol>
@@ -125,6 +128,7 @@
                         <ol>
                             <li>Design principles</li>
                             <li>UX/UI</li>
+                            <li>Clients First (Webflow)</li>
                         </ol>            
                     </div>
 
@@ -148,38 +152,44 @@
                 </div>
             </section>
 
-            <section id="portfolio" class="portfolio light-on-dark-alternate">
+            <section class="section_portfolio light-on-dark-alternate">
                 <h2>Featured work</h2>
 
-                <div class="portfolio-card">
+                <div class="portfolio-card dark-on-light">
                     <div>
                         <h3>Portfolio Website</h3>
                         <p>A static multipage website built from the ground up to showcase my projects, my skills and capabilities, and also a little bit about me as a person.</p>
                         <a href="./project1.html" id="button-style">Details</a>
                     </div>
-                    <img src="./assets/portfolio_hero_image.png" alt="project teaser image">
+                    <div>
+                        <img src="./assets/portfolio_hero_image.png" alt="project teaser image">
+                    </div>
                 </div>
 
-                <div class="portfolio-card alternate">
+                <div class="portfolio-card alternate dark-on-light">
                     <div>
                         <h3>Dev Frog Blog</h3>
                         <p>(WIP) A dynamically rendered blog website where users can create, read, update, and delete articles related to their learnings in tech. Whether its a green student learning their first language or a seasoned professional discussing effective systems design for limited database storage and high traffic. Its all about sharing the journey.</p>
                         <a href="./project2.html" id="button-style">Details</a>
                     </div>
-                    <img src="./assets/portfolio_hero_concept.png" alt="project teaser image">
+                    <div>
+                        <img src="./assets/portfolio_hero_concept.png" alt="project teaser image">
+                    </div>
                 </div>
 
-                <div class="portfolio-card">
+                <div class="portfolio-card dark-on-light">
                     <div>
                         <h3>Project Title3</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, atque amet similique provident debitis alias omnis quam pariatur quos blanditiis voluptates architecto aliquam dicta nihil necessitatibus, et iste nobis deleniti!</p>
                         <a href="./project3.html" id="button-style">Details</a>
                     </div>
-                    <img src="./mepic.jpg" alt="project teaser image">
+                    <div>
+                        <img src="./mepic.jpg" alt="project teaser image">
+                    </div>
                 </div>
 
                 <a href="./portfolio.html" id="button-style">See More Projects</a>
-            </section>
+            </section>      
         </main>
 
         <footer id="contactme" class="light-on-dark">

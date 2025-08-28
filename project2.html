@@ -24,13 +24,14 @@
         </header>
         
         <main class="project-main ">
-            <section id="project" class="project light-on-dark">
+            <section class="project light-on-dark">
                 <h2 id="title-description">Dev Frog Blog</h2>
-                <img src="./assets/portfolio_hero_concept.png" alt="project teaser image">
+                <img src="./assets/portfolio_hero_concept.png" alt="project hero image">
             </section>    
 
-            <section id="overview" class="overview dark-on-light">    
-                <h2>1.Overview</h2>
+            <section class="dark-on-light">  
+                <div class="section_num"><p>1</p></div>  
+                <h2>Overview</h2>
                 <p>The initial concept was a site for me to write and learn more about amphibians, however, it has morphed into a site where I intend to document my progress as a designer and developer. Further I wish to develop and improve it beyond just a simple CRUD app and evolve it into a multi-user platform for people to write about their learnings in tech, whether a user is starting from scratch and just wants to write about how excited they are to learn their first language to more seasoned devs discussing how to design systems that scale well while keeping costs to a minimum. A collection of information from all skill levels, information by the people, for the people.</p>
                 <p>Project Goal: The main goal is to build a dynamically rendered CRUD blog platform using what I have learnt in my fullstack web developer course. Secondary goals include adding multi-user utilization, data persistence, and machine learning for personalized recommendations.</p>
                 <p>Approach: Iterative 4-phase build with a refactor-first mindset to prioritize experimentation, learning, scalability and maintainability.</p>
@@ -38,7 +39,8 @@
             </section>    
 
             <section id="problems-solutions" class="problems-solutions light-on-dark-alternate">    
-                <h2>2.main body:From Vision to Execution</h2>
+                <div class="section_num"><p>2</p></div>
+                <h2>main body:From Vision to Execution</h2>
                 <h3>Software Architecture</h3>
                 <p>Multi-phased rollout: To prioritize learning, the project is split into distinct phases to enable me to meet the original project requirements while allowing me to reflect and expand further down the line. The phases are further explained under the deployment strategy.</p>
                 <p>Modularity: Codebase structured into reusable utilities, middleware, and route handlers to improve readability and for ease of testing.</p>
@@ -47,7 +49,7 @@
                 <p>Delete Logic: With specific UX considerations, I implemented a confirmation screen/modal, timed/delay undo, and archive states to prevent accidental loss and support recovery of all article object data.</p>
             </section>    
 
-            <section id="problems-solutions" class="problems-solutions dark-on-light-alternate">    
+            <section class="dark-on-light-alternate">    
                 <h3>Systems Design</h3>
                 <p>Routing Strategy: Dynamic routes (/posts/:id) for scalability and semantic clarity. This also enables better URL clarity for UX considerations (sharing, bookmarking). This also aids in dynamic layout rendering down the line based on specific article lengths.</p>
                 <p>Async Handling: Initial use of nested callbacks for phase 1 with a refactor plan including promises and async/await to prevent race conditions and potential wiped databases which already occurred during development.</p>
@@ -55,7 +57,7 @@
                 <p>Error Handling: To ensure consistent and maintainable error responses, I implemented centralized error handling using shared middleware and utility functions. This separation of concerns improves developer readability and guarantees that user-facing error messages are uniform across the application. Future plans include fallback UI components for smoother user experience during failed requests or invalid input.</p>
             </section>   
 
-            <section id="project-stack" class="project-stack dark-on-light">
+            <section class="project-stack dark-on-light">
                 <h3>Tech stack</h3>
                 <p>The tech stack is split into two parts, current implementation and future expansion. The current implementation are aspects that I have learned or am currently learning in my online coursework to satisfy the assignment brief. The future expansion deals with tech that I will be learning in the near future either through coursework or self-directed learning, this also relates to the phased rollout to create features in my current capacity and plan future features with the relevant technologies.</p>
                 <div class="tech-container">
@@ -102,13 +104,15 @@
                         </ol>            
                     </div>  
                     
-                    <h4>Future additions</h4>
-                    <ol>
-                        <li> SQL/PostgreSQL: replace Json with scalable persistence layer.</li>
-                        <li>Python (PyTorch,Tensorflow): machine learning integration for better content recommendations.</li>
-                        <li>Axe-core: Accessibility audit and inclusive design adherence. </li>
-                        <li>Jest/Mocha: validating logic, testing, and preventing additional regressions while refactoring.</li>
-                    </ol>
+                    <div>
+                        <h4>Future additions</h4>
+                        <ol>
+                            <li> SQL/PostgreSQL: replace Json with scalable persistence layer.</li>
+                            <li>Python (PyTorch,Tensorflow): machine learning integration for better content recommendations.</li>
+                            <li>Axe-core: Accessibility audit and inclusive design adherence. </li>
+                            <li>Jest/Mocha: validating logic, testing, and preventing additional regressions while refactoring.</li>
+                        </ol>
+                    </div>
                 </div>
             </section>
 
@@ -128,7 +132,7 @@
                 </ul>
             </section>
 
-            <section id="problems-solutions" class="problems-solutions light-on-dark-alternate">    
+            <section class="light-on-dark-alternate">    
                 <h3>UX & Layout Decisions</h3>
                 <p>Newspaper-style layout: Mimics moodboard aesthetics; prioritizes text- based visual hierarchy. This juxtaposes modern tech with traditional content consumption, creating a unique reading experience.</p>
                 <p>Dynamic layout rendering: Avoids monotony and provides a tactile experience.</p>
@@ -137,7 +141,7 @@
                 <p>Minimal animations: Minimal distraction and to ensure there are minimal performance hits.</p>
             </section>   
 
-            <section id="problems-solutions" class="problems-solutions dark-on-light-alternate">    
+            <section class="dark-on-light-alternate">    
                 <h3>Accessibility Considerations</h3>
                 <p>Semantic HTML structure with ARIA labels, ensuring all image tags have 'alt' text.</p>
                 <p>Keyboard navigation and screen reader support (future).</p>
@@ -145,36 +149,39 @@
                 <p>Axe-core to audit semantic structure, contrast ratios, and keyboard navigation.</p>
             </section> 
 
-            <section id="problems-solutions" class="problems-solutions dark-on-light">    
+            <section class="dark-on-light">    
                 <h3>Testing & Validation</h3>
                 <p>Manual testing of core flows</p>
                 <p>Input validation for required fields and character limits</p>
                 <p>Future integration of Jest/Mocha for automated testing</p>
             </section>             
 
-            <section id="problems-solutions" class="problems-solutions dark-on-light-alternate">    
+            <section class="dark-on-light-alternate">    
                 <h3>Deployment Strategy</h3>
                 <p>Phased rollout enables speedy development and testing on core functionality (CRUD) while working on additional feature that improves either UX/UI or scalability.</p>
                 <p>Local development for Phase 1 and phase 2. </p>
                 <p>Future plans include CI/CD pipelines or Github Actions, environment variables, and cloud hosting (still thinking about this).</p>
-                <p>The four phases are split as follows;</p>
-                <ol>
-                    <li>Phase 1 (complete) - Basic CRUD functionality and styling. </li>
-                    <li>Phase 2 (in progress) - Refactoring for better separation of concerns and future scalability, including meta tag search functionality. Accessibility audit using Axe-core.</li>
-                    <li>Phase 3 (future) - Create a relational database with either MySQL or PostgreSQL, including migration from JSON. Implementation of user authentication and profiles. </li>
-                    <li>Phase 4 (future) - Implementation of machine learning algorithms for better blog article recommendations and tracking. CI/CD automated testing and deployment.</li>
-                </ol>
+                <div>
+                    <p>The four phases are split as follows;</p>
+                    <ol>
+                        <li>Phase 1 (complete) - Basic CRUD functionality and styling. </li>
+                        <li>Phase 2 (in progress) - Refactoring for better separation of concerns and future scalability, including meta tag search functionality. Accessibility audit using Axe-core.</li>
+                        <li>Phase 3 (future) - Create a relational database with either MySQL or PostgreSQL, including migration from JSON. Implementation of user authentication and profiles. </li>
+                        <li>Phase 4 (future) - Implementation of machine learning algorithms for better blog article recommendations and tracking. CI/CD automated testing and deployment.</li>
+                    </ol>
+                </div>
             </section> 
 
-            <section id="problems-solutions" class="problems-solutions light-on-dark-alternate">    
+            <section class="light-on-dark-alternate">    
                 <h3>Documentation & Maintainability</h3>
                 <p>Full commit history and README.md available on my Github profile.</p>
                 <p>Blog posts on the Dev Frog Blog will document architectural decisions and learning journey.</p>
                 <p>Git strategy includes atomic commits, milestone tags, and changelogs</p>
             </section> 
 
-            <section id="problems-solutions" class="problems-solutions dark-on-light-alternate">    
-                <h2>3.Role of AI in the Project</h2>
+            <section class="dark-on-light-alternate">    
+                <div class="section_num"><p>3</p></div>
+                <h2>Role of AI in the Project</h2>
                 <p>With the prevalence of AI and the benefits it can bring to a project, I opted to utilize it on the blog project with a few caveats:</p>
                 <p>Mentorship and not developing a reliance on AI: giving explicit instructions to not code for me and to 'go Socrates mode', enabled me to use AI as a collaborator and mentor instead of a code monkey. I would still steer the ship, write the code, decide which methods to use, make architectural and system decisions. This approach allowed me to simulate mentorship and architectural dialogue, rather than outsourcing problem-solving</p>
                 <p>Learning scaffold: Using AI as a mentor and collaborator I could efficiently explore various methodologies, terminologies and concepts to better guide my knowledgebase and decision making process. By restricting the AI output and scope clarification, I could still build real world problem solving.</p>
@@ -182,8 +189,9 @@
                 <p>Debugging partner: helped to trace logic errors and plan refactoring strategies.</p>
             </section> 
 
-            <section id="problems-solutions" class="problems-solutions dark-on-light">    
-                <h2>4. Reflection & What to Improve</h2>
+            <section class="dark-on-light">    
+                <div class="section_num"><p>4</p></div>
+                <h2>Reflection & What to Improve</h2>
                 <h3>What I would do differently</h3>
                 <p>Start with async/await from the beginning to avoid nested callback complexity</p>
                 <p>Introduce modularization earlier to reduce refactor overhead</p>
@@ -191,13 +199,15 @@
                 <p>Prioritize accessibility tooling sooner (e.g., axe-core audits)</p>
                 <p>More in-depth layout designs, UX/UI considerations and a proper design brief would have reduced the time to complete the styling.</p>
             </section>    
-            <section id="problems-solutions" class="problems-solutions dark-on-light-alternate">     
+
+            <section class="dark-on-light-alternate">     
                 <h3>Learning vs Scalability</h3>
                 <p>JSON persistence was chosen for schema experimentation, not long-term scalability due to current knowledge gaps. At the same time provided a natural way to experiment with array and object manipulation.</p>
                 <p>Some layout decisions favoured expressiveness over convention to support creative UX but the limitations w.r.t. dynamic rendering were unknown. The layout had to support dynamic rendering over static rendering.</p>
                 <p>Robust testing and error handling critical to ensure a multi-user system does not shut down and to ensure there is no user-related errors due to missing input fields or malformed data.</p>
             </section>    
-            <section id="problems-solutions" class="problems-solutions light-on-dark-alternate">     
+
+            <section class="light-on-dark-alternate">     
                 <h3>Philosophy</h3>
                 <p>Code as a pencil drawing: Every decision is iterative and revisable</p>
                 <p>Quality over quantity: One deeply intentional project reveals more than a dozen rushed ones</p>
@@ -205,8 +215,9 @@
                 <p>Project based learning: watching and following tutorials only goes so far. Problem solving skills can not be taught but need to be cultivated, learnt - the hard way.</p>
             </section> 
 
-            <section id="problems-solutions" class="problems-solutions dark-on-light-alternate">    
-                <h2>5. Key Takeaways</h2>
+            <section class="dark-on-light-alternate">    
+                <div class="section_num"><p>5</p></div>
+                <h2>Key Takeaways</h2>
                 <p>Built with intention, not just instruction</p>
                 <p>Prioritized learning over 'just do it for the portfolio'</p>
                 <p>Designed for scalability, accessibility, and modularity</p>
