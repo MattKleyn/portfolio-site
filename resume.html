@@ -14,7 +14,8 @@
         <header>
             <nav id="nav-bar" class="light-on-dark">
                 <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
-                <ul id="nav-list" class="nav-list">
+                <a class="menu-toggle" id="menu-toggle" aria-label="Menu button" aria-expanded="false">☰</a>
+                <ul id="nav-links">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./portfolio.html">Portfolio</a></li>
                     <li><a href="./resume.html">Resume</a></li>
@@ -176,5 +177,14 @@
             <button id="button-style">Contact Me</button> 
             <p>&copy;2025</p> 
         </footer>
+
+        <script>
+            document
+                .getElementById('menu-toggle')
+                .addEventListener('click', function(){
+                    document.getElementById('nav-links').classList.toggle('active');
+                    documtent.getElementById('menu-toggle').ariaExpanded = document.getElementById('menu-toggle') == "true" ? "false" : "true";
+                });
+        </script>
     </body>
 </html>

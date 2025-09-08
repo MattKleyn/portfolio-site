@@ -54,14 +54,55 @@
             align-items: center;
             padding: 1rem 10rem;
 
+            @media (600px < width < 992px) {
+                padding: 1rem 4rem;
+            }
+
+            @media (width < 600px) {
+                padding: 1rem 1rem;
+            }
+
+            .menu-toggle {
+                @media (width > 992px) {
+                    display: none;
+                }
+            }
+
             ul {
                 display: inline-flex;
                 align-items: center;
                 gap: 1.5rem;
-                
+
+                &.active {
+                    display:flex;
+                }
+
+                @media (width < 992px) {
+                    display: none;
+                    /*display: flex;*/
+                    flex-direction: column;
+                    position: absolute;
+                    top: 60px;
+                    right: 0px;
+                    width: 100%;
+                    background-color: var(--background-color-alternate);
+                    text-align: right;
+                    gap: 0rem;
+                }
 
                 li {
                     border-bottom: 1px solid var(--background-color-navfoot);
+                    
+                    @media (width < 992px) {
+                        border-bottom: 1px solid var(--background-color-secondary);
+                        width: 100%;
+                        padding-right: 8rem;
+                    }
+
+                    @media (width < 600px) {
+                        padding-right: 2rem;
+                    }
+                
                 }
 
                 li:hover {
@@ -81,30 +122,50 @@
             font-size: 6rem;
             font-weight: 500;
             letter-spacing: 43%;
+
+            @media (width < 600px) {
+                font-size: 5rem;
+            }
         }
         
         h2 {
             font-family: var(--var-font-fam-headings);
             font-size: 4rem;
             font-weight: 400;
+
+            @media (width < 600px) {
+                font-size: 2.5rem;
+            }
         }
 
         h3 {
             font-family: var(--var-font-fam-headings);
             font-size: 3rem;
             font-weight: 400;
+
+            @media (width < 600px) {
+                font-size: 2rem;
+            }
         }
 
         h4 {
             font-family: var(--var-font-fam-headings);
             font-size: 2rem;
             font-weight: 400;
+
+            @media (width < 600px) {
+                font-size: 1rem;
+            }
         }
 
         h5 {
             font-family: var(--var-font-fam-headings);
             font-size: 1.5rem;
             font-weight: 400;
+
+            @media (width < 600px) {
+                font-size: 1rem;
+            }
         }
 
         /*hero h2 and project name h2, same id applied.*/
@@ -119,6 +180,16 @@
             display: flex;
             flex-wrap: wrap;
             gap: 6rem; 
+
+            @media (width < 992px) {
+                padding: 4rem 4rem;
+                gap: 2rem;
+            }
+
+            @media (width < 600px) {
+                padding: 2rem 1rem;
+                gap: 1rem;
+            }
         }
 
         /*Paragraph style global*/
@@ -128,6 +199,12 @@
             font-weight: 300;
             line-height: 2rem;
             margin-bottom: 1.5rem;
+
+            @media (width < 600px) {
+                font-size: var(--font-size-S);
+                line-height: 1.5rem;
+                margin-bottom: 1rem;
+            }
         }
 
         /*list style global*/
@@ -137,6 +214,11 @@
             font-weight: 300;
             line-height: 2rem; /*Design is gap 12px, but seems congested*/
             list-style: none;
+
+            @media (width < 600px) {
+                font-size: var(--font-size-S);
+                line-height: 1.5rem;
+            }
             
             li {
                 margin-block: 1rem;
@@ -155,6 +237,11 @@
             font-family: var(--var-font-fam-a);
             font-size: var(--font-size-M);
             font-weight: 300;
+
+            @media (width < 600px) {
+                font-size: var(--font-size-S);
+                line-height: 1.5rem;
+            }
         } 
 
         /*Button styles global*/
@@ -213,8 +300,12 @@
             gap: 0rem;
 
             div {
-                width: clamp(21.8rem, 50%, 50rem);
+                width: clamp(20.5rem, 50%, 50rem);
                 overflow: hidden;
+
+                @media (width < 992px) {
+                    width: 100%;
+                }
             }      
 
             img {
@@ -278,6 +369,10 @@
                 gap: 1rem;
                 border-radius: 1rem;
 
+                @media (width < 600px) {
+                    flex-direction: column-reverse;
+                }
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -292,6 +387,10 @@
                     width: 50%;
                     gap: 1rem;
                     border-radius: 1rem;
+
+                    @media (width < 600px) {
+                        width: 100%;
+                    }
                     
                     /*portfolio.html card tech stack*/
                     .project-stack {
@@ -326,19 +425,27 @@
                 margin: 0.5rem;
             }
 
-            .grid {
+            .background_info {
                 p {
                     margin-bottom: 3rem;
+
+                    @media (width < 600px) {
+                        margin-bottom: 1.5rem;
+                    }
                 }
 
                 .about_pic {
                     float: left;
-                    width: 35vw;
                     height: 50vh;
                     overflow: hidden;
                     object-fit: cover;
                     margin-right: 2rem;
                     margin-bottom: 2rem;
+
+                    @media (width < 600px) {
+                        width: 50%;
+                        margin-bottom: 1.5rem;
+                    }
                     
                     img {
                         height: 100%;
@@ -353,7 +460,6 @@
         justify-content: space-between;
         font-family: var(--var-font-fam-a);
         
-
         div {
             display: flex;
             flex-direction: column;
@@ -389,6 +495,10 @@
             gap: 1.5rem;
             padding: 6rem 10rem;
 
+            @media (width < 600px) {
+                padding: 4rem 4rem;
+            }
+
             h1 {
                 font-size: 1.5rem;
                 letter-spacing: initial;
@@ -410,6 +520,16 @@
             flex-direction: column;    
             gap: 4rem;
             padding: 3rem 10rem;
+
+            @media (width < 992px) {
+                padding: 2rem 4rem;
+                gap: 2rem;
+            }
+
+            @media (width < 600px) {
+                padding: 2rem 1rem;
+                gap: 1rem;
+            }
         }
 
         .resume-skills {          
@@ -419,6 +539,11 @@
                 grid-template-rows: repeat(5, auto);
                 row-gap: 2rem;
                 column-gap: 1rem;
+
+                @media (width < 600px) {
+                    grid-template-columns: 1fr;
+                    row-gap: 1rem;
+                }
             }
         }
 
@@ -434,7 +559,6 @@
                     margin-bottom: 1rem;
 
                     div + div {
-
                         text-align: center;
                     }
 
@@ -488,18 +612,47 @@
             position: absolute;
             left: -6.5rem;
             top: 3rem;
+
+            @media (600px <= width < 992px) {
+                width: 8rem;
+                height: 8rem;
+                border: 0.5rem solid #929292;
+                left: -3rem;
+                top: -2rem;
+            }
+
+            @media (width < 600px) {
+                width: 2.5rem;
+                height: 2.5rem;
+                border: 0.1rem solid #929292;
+                left: 1rem;
+                top: 0rem;
+            }
             
             p {
                 font-family: var(--var-font-fam-headings);
                 color: #929292;
                 font-size: 15rem;
                 font-weight: 400;
+
+                @media (600px <= width < 992px) {
+                    font-size: 8rem;
+                }
+
+                @media (width < 600px) {
+                    font-size: 2rem;
+                }
             }
         }        
 
         .project {
             margin-top: -12rem;
             padding-bottom: 8rem;
+
+            @media (width < 600px) {
+                margin-top: -10rem;
+                padding-bottom: 4rem;
+            }
 
             h2 {
                 position: relative; /*if static then z-index with img doesnt work*/
@@ -541,10 +694,18 @@
             flex-direction: column;
             gap: 6rem;
 
+            @media (width < 600px) {
+                gap: 2rem;
+            }
+
             .links {
                 display: flex;
                 justify-content: center;
                 gap: 6rem;
+
+                @media (width < 992px) {
+                    gap: 2rem;
+                }
             }
 
             .pagination {

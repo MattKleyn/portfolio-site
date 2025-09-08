@@ -14,7 +14,8 @@
         <header>
             <nav class="light-on-dark">
                 <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
-                <ul>
+                <a class="menu-toggle" id="menu-toggle" aria-label="Menu button" aria-expanded="false">☰</a>
+                <ul id="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="./portfolio.html">Portfolio</a></li>
                     <li><a href="./resume.html">Resume</a></li>
@@ -42,22 +43,22 @@
 
             <article class="background dark-on-light-alternate">
                 <h2>About Me</h2>
-                <div class="grid">
-                    
+                <div class="background_info">
                     <p>After graduating from university in 2015, I began my career as a Site Engineer with one of South Africa's Big 5 construction firms. In this onsite management role, I was responsible for translating consultant designs into reality, coordinating multidisciplinary teams, and ensuring quality standards were met across diverse project environments.</p>
                     <div class="about_pic">
-                        <img src="./mepic.jpg" alt="a photo of me onsite">
+                        <img src="./assets/site (3).jpg" alt="a photo of me onsite">
                     </div>
                     <p>Each site introduced new workflows, documentation styles, and technologies—many of which were inconsistent, inefficient, or poorly suited to real-world conditions. These recurring frustrations resulted in me saying to my teams: “One day, I'm going to build an app that actually works for us onsite.” That idea stayed with me and thus the seeds were planted, however I could not find the time to learn how to code and make my own software solution.</p>
-                    <p>After eight years in construction management, I took a step back to recalibrate. What followed was a period of deep reflection, experimentation, and growth. I explored art, design, and trading—but I eventually returned to that original idea and began learning to code. Since then, I've immersed myself in programming fundamentals, frontend and backend development, UX/UI design, accessibility, and no-code tools. What started as curiosity has evolved into a clear career direction: software development with a focus on thoughtful, user-centered systems.</p>
+                    <p>After eight years in construction management, I took a step back to recalibrate. What followed was a period of deep reflection, experimentation, and growth. I explored art, design, agriculture, and trading—but I eventually returned to that original idea and began learning to code. Since then, I've immersed myself in programming fundamentals, frontend and backend development, UX/UI design, accessibility, and no-code tools. What started as curiosity has evolved into a clear career direction: software development with a focus on thoughtful, user-centered systems.</p>
                     <p>My current strengths lie in Frontend Design and Development, but I'm actively expanding toward full-stack capabilities and machine learning integration to better understand and assist the user experience. I bring with me a wealth of transferable experience—strategic planning, systems thinking, multi-disciplinary coordination, change management and constructability analysis. It's an ambitious goal, it's long term, It demands grit and growth…it's <em>my</em> goal. And this goal will enable me to finally make that app I wanted to make for so long.</p>
                 </div>
                 <div class="hobbies">
-                    <img src="./mepic.jpg" alt="Cycling">
-                    <img src="./mepic.jpg" alt="Growing my own vegetables in my backyard">
+                    <img src="./assets/cycling copy.jpg" alt="Cycling with my Dad">
+                    <img src="./assets/Gardening (1).jpg" alt="Growing my own vegetables in my backyard">
+                    <img src="./assets/Snake handeling (14).jpg" alt="Me at a snake handeling course">
                     <img src="./mepic.jpg" alt="Drawing and Painting">
                     <img src="./mepic.jpg" alt="Cooking">
-                    <img src="./mepic.jpg" alt="Playing the guitar (badly)">
+                    <img src="./mepic.jpg" alt="Playing the guitar (badly)" hidden="true">
                     <img src="./mepic.jpg" alt="Beatboxing (also badly)" hidden="true">
                     <img src="./mepic.jpg" alt="Reading comics, manga, novels" hidden="true">
                     <img src="./mepic.jpg" alt="Smashing in Video Games" hidden="true">
@@ -202,5 +203,14 @@
             <button id="button-style">Contact Me</button> 
             <p>&copy;2025</p> 
         </footer>
+
+        <script>
+            document
+                .getElementById('menu-toggle')
+                .addEventListener('click', function(){
+                    document.getElementById('nav-links').classList.toggle('active');
+                    documtent.getElementById('menu-toggle').ariaExpanded = document.getElementById('menu-toggle') == "true" ? "false" : "true";
+                });
+        </script>
     </body>
 </html>
