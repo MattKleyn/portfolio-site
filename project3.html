@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Replica Site Webflow</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Red+Rose:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav-bar" class="light-on-dark">
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
+                <a class="menu-toggle" id="menu-toggle" aria-label="Menu button" aria-expanded="false">☰</a>
+                <ul id="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./resume.html">Resume</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="project-main ">
+            <section class="project light-on-dark">
+                <h2 id="title-description">Solvance Replica Webflow Website</h2>
+                <img src="./assets/Solvance_hero_image.png" alt="project hero image">
+            </section>    
+
+            <section class="dark-on-light">  
+                <div class="section_num"><p>1</p></div>  
+                <h2>Overview</h2>
+                <p>I have been engaged in a small group since June where we have been replicating complex websites using Webflow. The group was created as a way to collaborate with other devs with the intention of gaining a deeper understanding of using Webflow to create websites and making them responsive. This is the second website, however the emphasis for this site was the inclusion and application of Finsweets Clients First Webflow framework. </p>
+                <p>Project Goal: Gain an understanding in the Clients First framework and apply it to creating a complex website.</p>
+                <p>Approach: Phased approach, the landing page the desktop version was replicated section-by-section over a few weeks, after which the replica was made responsive on tablet, mobile landscape, and finally mobile portrait. Meeting were held three times per week to discuss how we handled the structure, styling, animations and any issues we faced while replicating the sections.</p>
+            </section>    
+
+            <section id="problems-solutions" class="problems-solutions light-on-dark-alternate">    
+                <div class="section_num"><p>2</p></div>
+                <h2>Main body: From Vision to Execution</h2>
+                <h3>Software Architecture</h3>
+                <p>Webflow is a no-code website builder with built in CMS features. Weblow also has a hosting option and an option to self-host, due to this project being a replica, it wont be hosted in any capacity to prevent potential legal ramifications. To prevent having to create a static page for every blog post, the built in CMS was configured using collection lists and conditional filtering (featured and latest) to enable the blog section to be dynamically rendered for all posts in two separate areas of the site.</p>
+            </section>    
+
+            <section class="dark-on-light-alternate">    
+                <h3>Systems Design</h3>
+                <p>There are many Webflow frameworks available to aid Webflow developers in creating websites, such as 'Clients-First', 'Lumos', 'MAST', and 'Saddle'. Each framework has pros and cons, either prioritizing readability or flexibility, or creating standard systems to enable the website owner to maintain and modify the website in-house. </p>
+                <p>Clients first falls into this latter category. Prioritizing a simple core structure and use of utility classes, the framework enable a person without coding experience to easily modify styling or layout by swapping out the desired classes. However the downside to this approach, similar to Bootstrap is the matter of class bloat. The HTML structure becomes inundated with classes in order for styling and layouts to be applied as utilities. While this approach does make it easy for someone to maintain and modify the site, it also introduces complexity in ensuring that all the relevant classes are available. Further this also requires additional containers in the HTML document to then receive the classes in order to have a separation of concerns (layouts vs styling).</p>
+                <p>Good SEO (search engine optimization) is kept with proper semantic structure. in the settings panel div wrappers were set to have the correct HTML element tags, being Header, Main, Footer, Nav, and Section.</p>
+            </section>   
+
+            <section class="project-stack dark-on-light">
+                <h3>Tech stack</h3>
+                <p></p>
+                <div class="tech-container">
+                    <div>
+                        <h4>Frontend</h4>
+                        <ul>
+                            <li>Webflow structure and styles</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Backend</h4>
+                        <ol>
+                            <li>Webflow CMS</li>
+                        </ol>             
+                    </div>
+
+                    <div>
+                        <h4>Tools</h4>
+                        <ol>
+                            <li>Webflow</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h4>Concepts</h4>
+                        <ol>
+                            <li>Design principles</li>
+                            <li>UX/UI</li>
+                            <li>Clients First - Webflow framework</li>
+                        </ol>            
+                    </div>  
+                </div>
+            </section>
+
+            <section class="dark-on-light-alternate">    
+                <h3>Key features</h3>
+                <ul class="features-list">
+                    <li>Multi-section landing page</li>
+                    <li>Dynamically rendered linked blog page</li>
+                    <li>CMS to store all blog posts and metadata for author and created dates</li>
+                    <li>Responsive design for desktop, tablet, landscape mobile, and portrait mobile</li>
+                </ul>
+            </section>
+
+            <section class="light-on-dark-alternate">    
+                <h3>UX & Layout Decisions</h3>
+                <p>The site was replicated as-is, without any modifications to the original layout and styling, with that said, there are a few things worth noting.</p>
+                <p>The desktop layout is consistent in terms of padding, line heights, font-size, and layout repetition (cards, flex row). This consistency and repetition benefitted the application of utility classes in the responsive design, as the same styles effectively filtered throughout the whole document. However there were instances where certain sections deviated at a specific breakpoint, thereby requiring custom classes to retain individual styling.</p>
+                <p>The form buttons and link buttons shared styling and with only two primary variants and one secondary button variance. This creates a clear visual hierarchy in the CTA's when scanning though the document.</p>
+                <p>Each landing page section was split clearly in terms of concept and visual layouts and styling. There was also good utilization of repetition in a side-by-side 'flex' layout with an image and content. This creates a good flow through the document as ever section retains its own identity but not so much that it seems like a different site all together.</p>
+                <p>A clear typographic hierarchy is evident between each heading level, making scanning easy. Further the main body text had consistent styling with the only variation being font colour. This, coupled with good contrast against the background is key to ensuring good readability especially for accessibility reasons as outlined below.</p>
+                <p>The animations were kept simple, and were reused often for the same context (heading fade in on scroll into view). This ensures attention is grabbed, and retained without being overstimulating.</p>
+            </section>   
+
+            <section class="dark-on-light-alternate">    
+                <h3>Accessibility Considerations</h3>
+                <p>As discussed above, the main body text had consistent styling, being a consistent font size of 1REM (16px). This ensures the text is large enough as per WGAC recommendations. Further while building the site we made exclusive use of REM for sizing as opposed to px, this ensures if the site client has altered the base font size in their preferences, or is using a zoom or magnifying tool, then all sizing will scale accordingly.</p>
+                <p>It should be noted that font contrast against background colour was not checked as it is assumed the site owner or designer audited the contrast during the design phase. It was also beyond the scope of the current project.</p>
+                <p>Further, to ensure screen readers would be able interpret images correctly, 'alt' text was inserted to all icons and images in the document.</p>
+            </section> 
+
+            <section class="dark-on-light" style="display:none;">     
+                <h3>Testing & Validation</h3>
+                <p></p>
+            </section>             
+
+            <section class="dark-on-light-alternate" style="display:none;">    
+                <h3>Deployment Strategy</h3>
+                <p></p>
+                <div>
+                    <p>The four phases are split as follows:</p>
+                    <ol>
+                        <li>Phase 1 (complete): </li>
+                        <li>Phase 2 (in progress): </li>
+                        <li>Phase 3 (future): </li>
+                        <li>Phase 4 (future): </li>
+                    </ol>
+                </div>
+            </section> 
+
+            <section class="light-on-dark-alternate" style="display:none;">    
+                <h3>Documentation & Maintainability</h3>
+                <p></p>
+            </section> 
+
+            <section class="dark-on-light-alternate" style="display:none;">    
+                <div class="section_num"><p>3</p></div>
+                <h2>Role of AI in the Project</h2>
+                <p></p>
+            </section> 
+
+            <section class="dark-on-light">    
+                <div class="section_num"><p>3</p></div>
+                <h2>Reflection & What to Improve</h2>
+                <h3>What I would do differently</h3>
+                <p>Responsive design proved challenging at times due to shared utility classes and combo classes, the shared nature of the classes resulted in unwanted changes being made to areas that shared those classes as not every section required the same alterations. The effect was a custom class becoming necessary in order to retain changes locally, this then contributed further to class bloat. To combat this in the future I will set up utility classes more strategically with responsive solutions in mind. For example if a section on desktop would be "flex-direction: row;" and on tablet change from 'row' to 'column', then I would have a utility to match the change, with an alternate class that would retain the 'flex-direction: row' through all the breakpoints.</p>
+                <p>The alternative is to separate layout from styling classes, and have a custom class for layouts on a per-section basis. This will keep layouts flexible, bespoke, and prevent unwanted changes. The downside is that it reduces the modularity that clients first tries to implement. I like to think of clients first as building with Legos, but by treating the layouts with a bespoke per-section custom class, one effectively creates a layout component already built with multiple legos, and that component has one place and one place only.</p>
+                <p>The other alternative, which is what I am currently leaning towards, is having global utility classes for styling applied to elements higher in the structure, perhaps even on the section wrapper. Then layout utilities can be placed locally with a custom class that is specific to a breakpoint, for instance a class of 'sectionName_tablet_flex-column'. This separation of concerns and custom class seems to offer the most flexibility without additional containers, however it still contributes to class bloat which could affect load time performance.</p>
+            </section>    
+
+            <section class="dark-on-light-alternate" style="display:none;">     
+                <h3>Learning vs Scalability</h3>
+                <p></p>
+            </section>    
+
+            <section class="light-on-dark-alternate">     
+                <h3>Philosophy</h3>
+                <p>Collaborative learning: By learning in a group and meeting frequently, we are able to explore and discuss alternate solutions. The discussions also help with soft skills, by explaining an issue and the thought process behind solving it, we are able to cultivate a collaborative environment focused on learning and group effort. By discussing our own solutions we naturally invite criticism, by being able to critique others and being able to take criticism, has helped to be more objective w.r.t. the workflows and resultant code.</p>
+                <p>Project based learning: Learning through implementation and trial and error. This is fast-tracked through the collaborative meetings as we discuss how we approached the section and how we overcame specific challenges.</p>
+                <p>Critical thinking and problem solving skills: Being able to explore and discuss multiple solutions, we have been able to discuss the benefits and drawbacks of certain solutions. This has also helped to further explore and dive deeper into specific scenarios to understand why a certain solution is more effective over another solution. </p>
+            </section> 
+
+            <section class="dark-on-light-alternate">    
+                <div class="section_num"><p>4</p></div>
+                <h2>Key Takeaways</h2>
+                <p>The Clients first framework helps to speed up the initial development however responsive design becomes tricky due to shared utility classes and combo classes.</p>
+                <p>A proper collaborative environment fosters good communication skills and problem and solution analysis between benefits and trade-offs.</p>
+                <p>Consistency in the initial design makes responsive design easier to handle.</p>
+            </section> 
+
+            <section class="links-pagination">
+                <div class="links">    
+                    <a href="" id="button-style" style="display:none;">View Live Site</a>
+                    <a href="https://preview.webflow.com/preview/solvance-mastercopy-055a51?utm_medium=preview_link&utm_source=designer&utm_content=solvance-mastercopy-055a51&preview=cd3c9a2b23b8e672373c75c0089c2acb&workflow=preview" id="button-style">View Webflow design</a>
+                </div>
+                <div class="pagination">
+                    <a href="./project1.html">Prev</a>
+                    <h3><a href="./portfolio.html">Projects</a></h3>
+                    <a href="./project3.html">Next</a>   
+                </div>
+            </section>
+        </main>
+        
+        <footer id="contactme" class="light-on-dark">
+            <div>
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo" class="logo-img">
+                <a href="https://www.linkedin.com/in/matthew-kleynhans-00242195"><img src="./assets/Linkedin Icon Streamline SVG Logos-white.svg" alt="linked-in logo">linkedin profile</a>
+                <a href="https://github.com/MattKleyn"><img src="./assets/Github Streamline Unicons Line-white.svg" alt="github logo">github profile</a> 
+            </div>
+
+            <button id="button-style">Contact Me</button> 
+            <p>&copy;2025</p> 
+        </footer>
+
+        <script>
+            document
+                .getElementById('menu-toggle')
+                .addEventListener('click', function(){
+                    document.getElementById('nav-links').classList.toggle('active');
+                    documtent.getElementById('menu-toggle').ariaExpanded = document.getElementById('menu-toggle') == "true" ? "false" : "true";
+                });
+        </script>   
+    </body>
+</html>

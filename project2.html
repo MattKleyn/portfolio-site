@@ -27,7 +27,7 @@
         <main class="project-main ">
             <section class="project light-on-dark">
                 <h2 id="title-description">Dev Frog Blog</h2>
-                <img src="./assets/portfolio_hero_concept.png" alt="project hero image">
+                <img src="./assets/Blog_hero_concept.png" alt="project hero image">
             </section>    
 
             <section class="dark-on-light">  
@@ -43,10 +43,12 @@
                 <div class="section_num"><p>2</p></div>
                 <h2>Main body: From Vision to Execution</h2>
                 <h3>Software Architecture</h3>
+                <p>Monolithic Acrchetecture: While not intentional, phase 1 rollout resembles a monolithic archetecture, by having all the Javascript code in a single file which is also all compiled at runtime. Phase 2 will move towards a modular monolithic archetecture will a clear separation of concerns and logic split among multiple files. This modularity will make testing more centralized and ensure each module can scale independently of each other. A potential switch to a hybrid modular-monolith and microservice archetecture may be in the offing for future expansion, specifically with the eventual addition of machine learning functionalities.</p>
                 <p>Multi-phased rollout: To prioritize learning, the project is split into distinct phases to enable me to meet the original project requirements while allowing me to reflect and expand further down the line. The phases are further explained under the deployment strategy.</p>
                 <p>Modularity: Codebase structured into reusable utilities, middleware, and route handlers to improve readability and for ease of testing.</p>
-                <p>Rendering Strategy: RESTful routes with dynamic EJS rendering based on content type and length.</p>
-                <p>Data Flow: The initial brief was to not have data persistence however; I opted for a JSON-based persistence for Phase 1 where the data schema is flexible enough to evolve toward SQL/NoSQL database in Phase 3.</p>
+                <p>Rendering Strategy: REST routes with dynamic EJS rendering based on content type and length.</p>
+                <p>REST routing: While the HTTP requests may not be entirely RESTful, i.e. not conforming strictly to REST constraints, the current rollout does include REST routes. During phase 2 and phase 3 the routes will be cleaned up to confom more cleanly to RESTful concepts.</p>
+                <p>Data Flow: The initial brief was to not have data persistence however; I opted for an unstructured JSON-based persistence for Phase 1 where the data schema is flexible enough to evolve as the requirements see fit during development. Phase 3 will include the creation and migration from JSON to a SQL database to better support search paramaters and data relationships.</p>
                 <p>Delete Logic: With specific UX considerations, I implemented a confirmation screen/modal, timed/delay undo, and archive states to prevent accidental loss and support recovery of all article object data.</p>
             </section>    
 

@@ -61,7 +61,7 @@
             @media (width < 600px) {
                 padding: 1rem 1rem;
             }
-
+            /*hides the menue icon for screen sizes above 992px*/
             .menu-toggle {
                 @media (width > 992px) {
                     display: none;
@@ -72,14 +72,13 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 1.5rem;
-
+                /*when the JS code add the class active, the following code is added*/
                 &.active {
                     display:flex;
                 }
-
+                /*the styling of the actual dropdown menu, only gets applied for screen < 992px*/
                 @media (width < 992px) {
                     display: none;
-                    /*display: flex;*/
                     flex-direction: column;
                     position: absolute;
                     top: 60px;
