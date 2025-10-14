@@ -91,7 +91,8 @@
 
                 li {
                     border-bottom: 1px solid var(--background-color-navfoot);
-                    
+                    transition: opacity 0.2s, bottom-border 0.2s;
+
                     @media (width < 992px) {
                         border-bottom: 1px solid var(--background-color-secondary);
                         width: 100%;
@@ -173,6 +174,25 @@
                 letter-spacing: 18%;
         }
 
+/*
+        .scrollFade {
+            animation: fadeUp both;
+            animation-timeline: view();
+            animation-range: entry 50% cover 100vh;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }*/
+
         /*section style global*/
         section, footer, article {
             padding: 6rem 10rem;
@@ -253,7 +273,7 @@
             border-radius: 5rem;
             text-align: center;
             font-weight: 400;
-            /*drop shadow*/
+            transition: background-color 0.2s, color 0.2s;
             
             &:hover {
                 background-color: var(--accent-color);
@@ -367,6 +387,14 @@
                 padding: 1rem;
                 gap: 1rem;
                 border-radius: 1rem;
+                border: 0.1rem solid var(--accent-color);
+                transition: transform 0.2s ease, filter 0.2s ease;
+
+                &:hover {
+                    filter: drop-shadow(0.3rem 0.3rem 0.5rem var(--accent-color));
+                    transform: scale(1.02);
+                }
+                
 
                 @media (width < 600px) {
                     flex-direction: column-reverse;
@@ -462,7 +490,7 @@
         div {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            justify-content: space-between;
             align-items: flex-start;
             
             .logo-img {
@@ -473,6 +501,10 @@
                 margin-right: 1rem;
                 width: 1.5rem;
             }
+        }
+
+        div + div {
+            align-items: flex-end;
         }
 
         p {
