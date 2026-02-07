@@ -26,17 +26,18 @@
         
         <main>
             <section class="section_portfolio light-on-dark-alternate">
-                <h2>Portfolio</h2><!--I think this in EJS script would be the best, CMS can be subject to the get requests and that way only need on card.html which will update contents depending on project, instead of x many .html pages for each project that will have to be set up every single time-->   
+                <h2>Portfolio</h2>
 
                 <div class="portfolio-card dark-on-light">
                     <div>
-                        <h3>Portfolio Website</h3>
-                        <p>A static multipage website built from the ground up to showcase my projects, my skills and capabilities, and also a little bit about me as a person.</p>
+                        <h3>Portfolio Website 2.0 - React Migration</h3>
+                        <p>Currently a static multipage website built from the ground up to showcase my projects, skills and capabilities. I am in the process of migrating the website to React. This will include new features such as state monitoring, light and dark mode, a motion design overhaul and freshening up some of the styles.</p>
                         <ul class="project-stack">
                             <li>Figma</li>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>Git</li>
+                            <li>React (full migration coming soon)</li>
                         </ul>
                         <a href="./project1.html" id="button-style">Details</a>
                     </div>
@@ -45,18 +46,35 @@
                     </div>
                 </div>
 
+                <div class="portfolio-card dark-on-light">
+                    <div>
+                        <h3>JoSe - Job Search Automatron</h3>
+                        <p>(MVP phase) A full ETL webscraper pipeline with a PostgreSQL DB for persistance. Features include user configurable filters for relevancy and is currently a CLI tool. Later iterations will include multiple scrapers and also a browser based UI to be built with Flask.</p>
+                        <ul class="project-stack">
+                            <li>Python</li>
+                            <li>PostgreSQL</li>
+                            <li>Flask (later)</li>
+                        </ul>                        
+                        <a href="./project5.html" id="button-style">Details</a>
+                    </div>
+                    <div>
+                        <img src="./assets/JoSe hero.png" alt="project teaser image" loading="lazy">
+                    </div>
+                </div>  
+
                 <div class="portfolio-card alternate dark-on-light">
                     <div>
                         <h3>Dev Frog Blog</h3>
-                        <p>(WIP) A dynamically rendered blog website where users can create, read, update, and delete articles related to their learnings in tech. Whether its a green student learning their first language or a seasoned professional discussing effective systems design for limited database storage and high traffic. Its all about sharing the journey.</p>
+                        <p>(Phase 3 complete) A dynamically rendered CRUD based blog website, using EJS for server side dynamic rendering, a PostgreSQL DB for data persistence, user profiles and authentication, Google OAuth, and server side sessions.</p>
                         <ul class="project-stack">
                             <li>Figma</li>
                             <li>EJS</li>
                             <li>CSS</li>
                             <li>Javascript</li>
                             <li>Node.js</li>
-                            <li>Express</li>
+                            <li>Express.js</li>
                             <li>Git</li>
+                            <li>PostgreSQL</li>
                         </ul>                        
                         <a href="./project2.html" id="button-style">Details</a>
                     </div>
@@ -85,18 +103,17 @@
 
                 <div class="portfolio-card alternate dark-on-light">
                     <div>
-                        <h3>Comics, Manga, and Books collection</h3>
-                        <p>Coming Soon. A database collection for all your comics, manga, and novels that you own. Include reviews and ratings for your favorite reads and share them with others. This project is currently in design phase, and will be updated soon.</p>
+                        <h3>Digital novel, comics and manga libray</h3>
+                        <p>(Coming Soon). A database collection for all your comics, manga, and novels that you own. The frontend is will built with React, with the backend being Javascript, Node, and PostgreSQL. This app will also feature multiple public API's to retrieve novel, comic, and manga information. Potentially also featuring an API for others to plug into to retrieve data normalized into a singular cohesive schema.  This project is currently in design phase, and will be updated soon.</p>
                         <ul class="project-stack">
                             <li>Figma</li>
-                            <li>EJS</li>
                             <li>CSS</li>
+                            <li>React</li>
                             <li>Javascript</li>
                             <li>Node.js</li>
                             <li>Express</li>
                             <li>Axios</li>
                             <li>PostgreSQL</li>
-                            <li>Postman</li>
                         </ul>                        
                         <a href="./project4.html" id="button-style">Details</a>
                     </div>
@@ -105,24 +122,6 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card dark-on-light" style="display:none;">
-                    <div>
-                        <h3>Project Title5</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, atque amet similique provident debitis alias omnis quam pariatur quos blanditiis voluptates architecto aliquam dicta nihil necessitatibus, et iste nobis deleniti!</p>
-                        <ul class="project-stack">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
-                            <li>Node.js</li>
-                            <li>Express</li>
-                            <li>EJS</li>
-                        </ul>                        
-                        <a href="./project5.html" id="button-style">Details</a>
-                    </div>
-                    <div>
-                        <img src="./mepic.jpg" alt="project teaser image" loading="lazy">
-                    </div>
-                </div>         
             </section>
         </main>
         
