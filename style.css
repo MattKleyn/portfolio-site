@@ -317,6 +317,8 @@
             justify-content: space-around;
             align-items: center;
             gap: 0rem;
+            height: 100vh;
+            padding: 0rem 4rem;
 
             div {
                 width: clamp(20.5rem, 50%, 50rem);
