@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MRK Portfolio Site - JoSe: Job Search Automatron</title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Red+Rose:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav-bar" class="light-on-dark">
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo">
+                <a class="menu-toggle" id="menu-toggle" aria-label="Menu button" aria-expanded="false">☰</a>
+                <ul id="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./resume.html">Resume</a></li>
+                    <li><a href="#contactme" style="display: none;">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="project-main ">
+            <section class="project light-on-dark">
+                <h2 id="title-description">JoSe: Job Search Automatron</h2>
+                <img src="./assets/JoSe hero.png" alt="project hero image">
+            </section>    
+
+            <section class="dark-on-light">  
+                <div class="section_num"><p>1</p></div>  
+                <h2>Overview</h2>
+                <p>(MVP in developement) Job search is a time intensive process, due to how 'muddy' searching is. By that i mean look through x ammount of job posts on y amount of job posting sites and manually going through and verifying each one that meets a set of basic criteria that matches ones existing skillset...and that already after apply location and sector filters on the sites themseleves. Then comes the application process which is even more tedius. So consiering that I needed python practice, Im learning various bits and bobs in my sphere of expertise, and building projects and then still job search, I decided to save mysef some time and headach by building something to help me out. So enter JoSe - Job Search Automatron, an ETL (extract, transform, load) web scraper pipeline that scrapes job posting sites, applies filters to the scraped posts for relevancy and then persists them in a DB for me to easily go through and apply...with some cool stuff coming in the near future.</p>
+                <p>Project Goal: To get access to larger quantity and higher relevancy job posts in a shorter amount of time.</p>
+                <p>Approach: Bespoke scrapers per site scraped send raw data to a global transformer that normalizes the data into a cohesive and easy to work with schema, applies bussiness log to the data to apply acceptance logic to each post, then persists each post to a DB. This is done through a CLI temporarily and later through a browser based UI. Later iterations to also send email to myself on a scheduled basis of new or updated job posts, and to automate the job application process.</p>
+            </section>    
+
+            <section id="problems-solutions" class="problems-solutions light-on-dark-alternate">    
+                <div class="section_num"><p>2</p></div>
+                <h2>Main body: From Vision to Execution</h2>
+                <h3>Software Architecture</h3>
+                <p>A modular monolithic archetecture with clear internal separation between layers. This combination gives me easy deployment due to the monolithic structure, but easy testing, extensibility and maintainability due to the clear internal separation of layers. The layers are organised as follows:</p>
+                <ul>
+                    <li>Scraping and crawling layer</li>
+                    <li>Transformer layer</li>
+                    <li>Acceptance layer</li>
+                    <li>Repository (DB) layer</li>
+                </ul>
+            </section>    
+
+            <section class="dark-on-light-alternate">    
+                <h3>Systems Design</h3>
+                <p>The MVP design is Python backend with a PostgreSQL Db for data persistance and the CLI as user interface. The beautiful soup library was used to build the scraper and pseudo crawler for its simplicity. In the post-MVP phase an LLM API will be added to aid with semantic data extraction and normalization where the existing Beautiful Soup extractor falls short. Mainly due to real world messy and inconsistant data, this is where the LLM can be leveraged.</p>
+                <p>To limit LLM API token usage, the existing scraper will be modified to only extract the job posting html from the page html - I dont need the LLM to parse nav bars, footers, and ancilliarry information not related to the job post. The existing scraper bing deterministic - the code will always output the same thing given the same output - will help to prevent LLM dift and better contain hallucinations. The LLM having good semantic search will then be more effective in extracting data from inconsistant HTML and can aid with certain tricky data normalization - namely date formats.</p>
+            </section>   
+
+            <section class="project-stack dark-on-light">
+                <h3>Tech stack</h3>
+                <p></p>
+                <div class="tech-container">
+                    <div>
+                        <h4>Frontend</h4>
+                        <ul>
+                            <li>Flask (coming later)</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Backend</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>LLM API (coming soon)</li>
+                            <li>PostgreSQL</li>
+                        </ul>             
+                    </div>
+
+                    <div>
+                        <h4>Tools</h4>
+                        <ul>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Concepts</h4>
+                        <ul>
+                            <li>System design principles</li>
+                        </ul>            
+                    </div>  
+                </div>
+            </section>
+
+            <section class="dark-on-light-alternate">    
+                <h3>Key features</h3>
+                <ul class="features-list">
+                    <li>CLI entrpoint for now, browser based UI later</li>
+                    <li>Multiple bespoke scrapers and crawlers per site</li>
+                    <li>Single global transformer to normalize data (MVP only) and pass to acceptance gates for filtering</li>
+                    <li>Configurable user filters for acceptance logic</li>
+                    <li>Upsert functions instead of Delete Insert for updated posts</li>
+                    <li>Email capabilities (later)</li>
+                </ul>
+            </section>
+
+            <section class="light-on-dark-alternate" style="display:none;">    
+                <h3>UX & Layout Decisions</h3>
+                <p></p>
+            </section>   
+
+            <section class="dark-on-light-alternate" style="display:none;">    
+                <h3>Accessibility Considerations</h3>
+                <p></p>
+            </section> 
+
+            <section class="dark-on-light" style="display:none;">     
+                <h3>Testing & Validation</h3>
+                <p></p>
+            </section>             
+
+            <section class="dark-on-light-alternate" style="display:none;">    
+                <h3>Deployment Strategy</h3>
+                <p></p>
+                <div>
+                    <p>The four phases are split as follows:</p>
+                    <ol>
+                        <li>Phase 1 (complete): </li>
+                        <li>Phase 2 (in progress): </li>
+                        <li>Phase 3 (future): </li>
+                        <li>Phase 4 (future): </li>
+                    </ol>
+                </div>
+            </section> 
+
+            <section class="light-on-dark-alternate" style="display:none;">    
+                <h3>Documentation & Maintainability</h3>
+                <p></p>
+            </section> 
+
+            <section class="dark-on-light-alternate" style="display:none;">    
+                <div class="section_num"><p>3</p></div>
+                <h2>Role of AI in the Project</h2>
+                <p></p>
+            </section> 
+
+            <section class="dark-on-light" style="display:none;">    
+                <div class="section_num"><p>3</p></div>
+                <h2>Reflection & What to Improve</h2>
+                <h3>What I would do differently</h3>
+                <p></p>
+            </section>    
+
+            <section class="dark-on-light-alternate" style="display:none;">     
+                <h3>Learning vs Scalability</h3>
+                <p></p>
+            </section>    
+
+            <section class="light-on-dark-alternate" style="display:none;">     
+                <h3>Philosophy</h3>
+                <p></p>
+            </section> 
+
+            <section class="dark-on-light-alternate" style="display:none;">    
+                <div class="section_num"><p>4</p></div>
+                <h2>Key Takeaways</h2>
+                <p></p>
+            </section> 
+
+            <section class="links-pagination">
+                <div class="links">    
+                    <a href="" id="button-style" style="display:none;">View Live Site</a>
+                    <a href="https://github.com/MattKleyn/JoSe_Job_Seach_Automatron" id="button-style">View Github Repository</a>
+                </div>
+                <div class="pagination">
+                    <a href="./project4.html">Prev</a>
+                    <h3><a href="./portfolio.html">Projects</a></h3>
+                    <a href="./project1.html">Next</a>   
+                </div>
+            </section>
+        </main>
+        
+        <footer id="contactme" class="light-on-dark">
+            <div>
+                <img src="./assets/logo.svg" height="50" alt="My personal brand logo" class="logo-img">
+                <a href="https://www.linkedin.com/in/matthew-kleynhans-00242195"><img src="./assets/Linkedin Icon Streamline SVG Logos-white.svg" alt="linked-in logo">linkedin profile</a>
+                <a href="https://github.com/MattKleyn"><img src="./assets/Github Streamline Unicons Line-white.svg" alt="github logo">github profile</a> 
+            </div>
+
+            <div>
+                <button id="button-style" style="visibility: hidden;">Contact Me</button> 
+                <p>&copy;2025</p>   
+            </div>
+        </footer>
+
+        <script>
+            document
+                .getElementById('menu-toggle')
+                .addEventListener('click', function(){
+                    document.getElementById('nav-links').classList.toggle('active');
+                    documtent.getElementById('menu-toggle').ariaExpanded = document.getElementById('menu-toggle') == "true" ? "false" : "true";
+                });
+        </script>           
+    </body>
+</html>
